@@ -1,0 +1,145 @@
+{
+  "platform": "lifefitnesspk",
+  "platform_name": "lifefitnesspk",
+  "platform_display_name": "Life Fitness PK",
+  "platform_type": "ecommerce",
+  "base_url": "https://lifefitnesspk.com",
+  "main_category": "Sports & Fitness",
+  "brand_name": "Life Fitness PK",
+  "category_paths": {
+    "Gym Equipment": [
+      "https://lifefitnesspk.com/product-category/cardio-equipments/treadmills/",
+      "https://lifefitnesspk.com/product-category/cardio-equipments/elliptical-trainers/",
+      "https://lifefitnesspk.com/product-category/cardio-equipments/rowing-machines/",
+      "https://lifefitnesspk.com/product-category/cardio-equipments/upright-bikes/",
+      "https://lifefitnesspk.com/product-category/cardio-equipments/recumbent-bikes/",
+      "https://lifefitnesspk.com/product-category/cardio-equipments/spin-bikes/",
+      "https://lifefitnesspk.com/product-category/weight-training/multi-gyms/",
+      "https://lifefitnesspk.com/product-category/weight-training/benches/",
+      "https://lifefitnesspk.com/product-category/weight-training/dumbbells/",
+      "https://lifefitnesspk.com/product-category/weight-training/weight-plates/",
+      "https://lifefitnesspk.com/product-category/weight-training/bars-rods-barbells/",
+      "https://lifefitnesspk.com/product-category/weight-training/kettle-bells/",
+      "https://lifefitnesspk.com/product-category/weight-training/medicine-balls/",
+      "https://lifefitnesspk.com/product-category/fitness-accessories/exercise-mat/",
+      "https://lifefitnesspk.com/product-category/fitness-accessories/resistance-bands-expander/",
+      "https://lifefitnesspk.com/product-category/fitness-accessories/push-pull-up-bars/",
+      "https://lifefitnesspk.com/product-category/fitness-accessories/jump-ropes/",
+      "https://lifefitnesspk.com/product-category/fitness-accessories/ab-roller/",
+      "https://lifefitnesspk.com/product-category/fitness-accessories/gym-balls/",
+      "https://lifefitnesspk.com/product-category/fitness-accessories/massage-equipment-foam-rollers/"
+    ],
+    "Sports Gear": [
+      "https://lifefitnesspk.com/product-category/sports/basketball/",
+      "https://lifefitnesspk.com/product-category/sports/football/",
+      "https://lifefitnesspk.com/product-category/sports/tabletennis/",
+      "https://lifefitnesspk.com/product-category/boxing-fitness-accessories/boxing-accessories/",
+      "https://lifefitnesspk.com/product-category/boxing-fitness-accessories/boxing-accessories/boxing-gloves/",
+      "https://lifefitnesspk.com/product-category/boxing-fitness-accessories/boxing-accessories/boxing-bag/",
+      "https://lifefitnesspk.com/product-category/boxing-fitness-accessories/boxing-accessories/boxing-dummy/",
+      "https://lifefitnesspk.com/product-category/boxing-fitness-accessories/boxing-accessories/boxing-stands/",
+      "https://lifefitnesspk.com/product-category/boxing-fitness-accessories/boxing-accessories/boxing-training/",
+      "https://lifefitnesspk.com/product-category/boxing-fitness-accessories/boxing-accessories/protection/",
+      "https://lifefitnesspk.com/product-category/boxing-fitness-accessories/boxing-accessories/wraps-inners/"
+    ],
+    "Sportswear": [
+      "https://lifefitnesspk.com/product-category/active-wear/mens-wear/",
+      "https://lifefitnesspk.com/product-category/active-wear/womens-wear/",
+      "https://lifefitnesspk.com/product-category/active-wear/mens-golf-wear/",
+      "https://lifefitnesspk.com/product-category/boxing-fitness-accessories/fitness-accessories/gym-gloves/",
+      "https://lifefitnesspk.com/product-category/boxing-fitness-accessories/fitness-accessories/weight-lifting-belts/",
+      "https://lifefitnesspk.com/product-category/boxing-fitness-accessories/fitness-accessories/strength-gear/",
+      "https://lifefitnesspk.com/product-category/boxing-fitness-accessories/fitness-accessories/wraps-straps/",
+      "https://lifefitnesspk.com/product-category/fitness-accessories/support-wear/",
+      "https://lifefitnesspk.com/product-category/fitness-accessories/training-gloves/"
+    ],
+    "Outdoor & Adventure": [
+      "https://lifefitnesspk.com/product-category/bicycles/mountain-bike/",
+      "https://lifefitnesspk.com/product-category/bicycles/mountain-bike/giant-mountain-bike/",
+      "https://lifefitnesspk.com/product-category/bicycles/mountain-bike/liv-mountain-bike/",
+      "https://lifefitnesspk.com/product-category/bicycles/mountain-bike/momentum-mountain-bike/",
+      "https://lifefitnesspk.com/product-category/bicycles/hitch-bike-racks/",
+      "https://lifefitnesspk.com/product-category/bicycles/hitch-bike-racks/hollywood-racks/",
+      "https://lifefitnesspk.com/product-category/bicycles/bicycle-accessorirs/",
+      "https://lifefitnesspk.com/product-category/bicycles/bicycle-accessorirs/cycling-gloves/"
+    ]
+  },
+  "selectors": {
+    "product_container": ".wd-product, .product, .woocommerce-loop-product",
+    "product_name": ".wd-entities-title a, .woocommerce-loop-product__title, .product-title, h2, h3",
+    "product_price": ".price .woocommerce-Price-amount bdi, .price .woocommerce-Price-amount, .price .amount, .woocommerce-Price-amount, .price",
+    "product_image": "img",
+    "product_link": ".product-image-link, .wd-entities-title a, .woocommerce-LoopProduct-link, a",
+    "brand": ".brand, .product-brand, .woocommerce-loop-product__brand",
+    "pagination": ".woocommerce-pagination, .pagination, .page-numbers",
+    "next_page": ".next, .page-numbers .next, .woocommerce-pagination .next"
+  },
+  "keywords": {
+    "Gym Equipment": [
+      "dumbbell", "treadmill", "bench press", "yoga mat",
+      "barbell", "kettlebell", "resistance band", "pull-up bar",
+      "rowing machine", "exercise bike", "elliptical", "medicine ball",
+      "foam roller", "weight plates", "smith machine", "squat rack", "jump rope",
+      "weight", "gym", "fitness", "cardio", "strength", "training",
+      "bench", "rack", "machine", "equipment", "accessories"
+    ],
+    "Sports Gear": [
+      "cricket bat", "football", "hockey stick", "tennis racket",
+      "basketball", "volleyball", "badminton racket", "table tennis paddle",
+      "golf club", "rugby ball", "boxing gloves", "baseball bat",
+      "archery bow", "swimming goggles", "kickboard", "surfboard",
+      "sports", "gear", "equipment", "ball", "racket", "stick",
+      "gloves", "protection", "training", "boxing", "mma"
+    ],
+    "Sportswear": [
+      "tracksuit", "jersey", "shorts", "leggings",
+      "compression shirt", "running shoes", "football boots",
+      "training shoes", "socks", "headband", "wristband",
+      "hoodie", "tank top", "sweatpants", "cap",
+      "wear", "clothing", "apparel", "shirt", "pants",
+      "shoes", "boots", "accessories", "gloves", "belt"
+    ],
+    "Outdoor & Adventure": [
+      "tent", "camping", "hiking", "cycling",
+      "sleeping bag", "backpack", "trekking pole", "climbing rope",
+      "lantern", "binoculars", "compass", "camp stove",
+      "kayak", "canoe", "helmet", "life jacket",
+      "outdoor", "adventure", "camping", "hiking", "cycling",
+      "bike", "bicycle", "mountain", "road", "helmet"
+    ]
+  },
+  "synonyms": {
+    "dumbbell": ["dumbell", "dumbbells", "weights", "hand weights"],
+    "treadmill": ["treadmill", "running machine", "cardio machine"],
+    "bench": ["bench", "workout bench", "exercise bench"],
+    "barbell": ["barbell", "bar", "weight bar", "olympic bar"],
+    "kettlebell": ["kettlebell", "kettle bell", "kettlebells"],
+    "resistance": ["resistance", "elastic", "rubber", "band"],
+    "pull-up": ["pull-up", "pullup", "chin-up", "chinup"],
+    "rowing": ["rowing", "rower", "rowing machine"],
+    "bike": ["bike", "bicycle", "cycle", "cycling"],
+    "elliptical": ["elliptical", "cross trainer", "elliptical trainer"],
+    "medicine": ["medicine", "med", "exercise ball"],
+    "foam": ["foam", "roller", "massage"],
+    "weight": ["weight", "plate", "disc"],
+    "smith": ["smith", "cage", "rack"],
+    "squat": ["squat", "power", "cage"],
+    "jump": ["jump", "rope", "skipping"],
+    "boxing": ["boxing", "punch", "fight", "mma"],
+    "gloves": ["gloves", "mitts", "hand protection"],
+    "shoes": ["shoes", "footwear", "sneakers", "trainers"],
+    "shirt": ["shirt", "top", "tee", "t-shirt"],
+    "pants": ["pants", "trousers", "bottoms"],
+    "helmet": ["helmet", "head protection", "safety"],
+    "bike": ["bike", "bicycle", "cycle", "mountain bike"]
+  },
+  "settings": {
+    "max_pages": 5,
+    "delay_between_requests": 2,
+    "timeout": 30,
+    "retry_attempts": 3,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "force_selenium": true,
+    "skip_bs_fallback": true
+  }
+}

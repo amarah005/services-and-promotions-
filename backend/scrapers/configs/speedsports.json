@@ -1,0 +1,79 @@
+{
+  "platform_name": "speedsports",
+  "platform_display_name": "SPL - Speed (Pvt.) Ltd.",
+  "platform_type": "ecommerce",
+  "base_url": "https://speedsports.pk/",
+  "currency": "PKR",
+  "main_category": "Sports & Fitness",
+  "subcategory": "Sportswear",
+  "seller_username": "speedsports",
+  "seller_display_name": "SPL - Speed (Pvt.) Ltd.",
+  "seller_profile_url": "https://speedsports.pk",
+  "category_paths": {
+    "default": "/",
+    "men": "/collections/men",
+    "women": "/collections/women",
+    "kids": "/collections/kids",
+    "sports": "/collections/sports",
+    "new": "/collections/new-arrivals",
+    "sale": "/collections/sale"
+  },
+  "selectors": {
+    "product_container": ".product-item, .grid__item, .product-grid-item, .t4s-product",
+    "title": ".product-title a, .product-name a, .t4s-product-title a",
+    "price": ".price, .product-price, .t4s-product-price",
+    "image": "img[loading], .product-image img, .t4s-product-main-img",
+    "url": "a[href*='/products/'], .product-link",
+    "next_page": "a[href*='page='], .pagination a"
+  },
+  "keywords": {
+    "Gym Equipment": [
+      "dumbbell", "treadmill", "bench press", "yoga mat",
+      "barbell", "kettlebell", "resistance band", "pull-up bar",
+      "rowing machine", "exercise bike", "elliptical", "medicine ball",
+      "foam roller", "weight plates", "smith machine", "squat rack", "jump rope"
+    ],
+    "Sports Gear": [
+      "cricket bat", "football", "hockey stick", "tennis racket",
+      "basketball", "volleyball", "badminton racket", "table tennis paddle",
+      "golf club", "rugby ball", "boxing gloves", "baseball bat",
+      "archery bow", "swimming goggles", "kickboard", "surfboard"
+    ],
+    "Sportswear": [
+      "tracksuit", "jersey", "shorts", "leggings",
+      "compression shirt", "running shoes", "football boots",
+      "training shoes", "socks", "headband", "wristband",
+      "hoodie", "tank top", "sweatpants", "cap"
+    ],
+    "Outdoor & Adventure": [
+      "tent", "camping", "hiking", "cycling",
+      "sleeping bag", "backpack", "trekking pole", "climbing rope",
+      "lantern", "binoculars", "compass", "camp stove",
+      "kayak", "canoe", "helmet", "life jacket"
+    ]
+  },
+  "synonyms": {
+    "dumbbell": ["dumbbells"],
+    "kettlebell": ["kettlebells"],
+    "resistance band": ["resistance bands", "exercise band", "exercise bands"],
+    "pull-up bar": ["pull up bar", "chin-up bar", "chin up bar"],
+    "exercise bike": ["spin bike", "stationary bike"],
+    "elliptical": ["cross trainer"],
+    "weight plates": ["weight plate", "plates"],
+    "smith machine": ["smith rack"],
+    "squat rack": ["power rack", "power cage"],
+    "running shoes": ["runners", "trainers", "sneakers"],
+    "sports shoes": ["athletic shoes", "gym shoes"],
+    "football boots": ["soccer cleats", "football cleats"]
+  },
+  "settings": {
+    "page_load_delay": 2,
+    "scroll_pause": 1,
+    "timeout": 30,
+    "handle_popups": false,
+    "close_ads": false,
+    "wait_for_lazy_images": true,
+    "scroll_to_bottom": false,
+    "click_load_more": false
+  }
+}

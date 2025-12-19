@@ -1,0 +1,101 @@
+{
+  "platform_name": "ascender",
+  "platform_display_name": "Ascender Outdoors",
+  "platform_type": "ecommerce",
+  "base_url": "https://ascender.pk",
+  "currency": "PKR",
+  "main_category": "Sports & Fitness",
+  "subcategory": "Outdoor & Adventure",
+  "seller_username": "ascender",
+  "seller_display_name": "Ascender Outdoors",
+  "seller_profile_url": "https://ascender.pk",
+  
+  "category_paths": {
+    "Outdoor & Adventure": {
+      "Tents": "/collections/tents",
+      "Camping": "/collections/furniture", 
+      "Hiking": "/collections/rucksacks",
+      "Cycling": "/collections/accessories",
+      "Sleeping Bags": "/collections/sleeping-bags",
+      "Backpacks": "/collections/rucksacks",
+      "Trekking Pole": "/collections/walking-poles",
+      "Climbing Rope": "/collections/ropes",
+      "Lantern": "/collections/light",
+      "Binoculars": "/collections/accessories",
+      "Compass": "/collections/accessories",
+      "Camp Stove": "/collections/stoves",
+      "Kayak": "/collections/accessories",
+      "Canoe": "/collections/accessories",
+      "Helmet": "/collections/helmets",
+      "Life Jacket": "/collections/accessories"
+    }
+  },
+  
+  "selectors": {
+    "product_container": ".grid-item.product-grid-item, .product-item, .grid-product-item, .product-card, .product",
+    "product_name": ".grid-link__title, .product-title, .product-name, h3, h4, .title",
+    "product_url": "a[href*='/collections/'], a[href*='/products/'], .product-link",
+    "product_price": ".grid-link__org_price, .price, .product-price, .money, .price-current, .price-now, .price-value",
+    "product_image": "img[src*='products'], .product-image img, .grid-product-image img, .product-photo img",
+    "product_description": ".product-description, .product-summary, .description, .product-excerpt",
+    "product_availability": ".availability, .stock-status, .in-stock, .out-of-stock, .product-availability",
+    "product_brand": ".brand, .product-brand, .manufacturer, .vendor",
+    "product_sku": ".sku, .product-sku, .variant-sku, .product-code"
+  },
+  
+  "api_endpoints": {
+    "products": "/products.json",
+    "collections": "/collections.json",
+    "search": "/search.json"
+  },
+  
+  "api_parser": {
+    "products": "parse_shopify_products",
+    "collections": "parse_shopify_collections"
+  },
+  
+  "keywords": {
+    "Outdoor & Adventure": [
+      "tent", "camping", "hiking", "cycling", "sleeping bag", "backpack", 
+      "trekking pole", "climbing rope", "lantern", "binoculars", "compass", 
+      "camp stove", "kayak", "canoe", "helmet", "life jacket"
+    ]
+  },
+  
+  "synonyms": {
+    "tent": ["camping tent", "hiking tent", "backpacking tent"],
+    "backpack": ["rucksack", "hiking pack", "trekking pack", "mountaineering pack"],
+    "sleeping bag": ["sleeping system", "camping bag", "hiking bag"],
+    "trekking pole": ["walking pole", "hiking pole", "trekking stick"],
+    "climbing rope": ["dynamic rope", "static rope", "mountaineering rope"],
+    "helmet": ["climbing helmet", "safety helmet", "protection helmet"],
+    "lantern": ["camping light", "outdoor light", "portable light"],
+    "compass": ["navigation compass", "outdoor compass", "hiking compass"],
+    "camp stove": ["portable stove", "camping stove", "outdoor stove"],
+    "kayak": ["kayaking", "paddle boat", "watercraft"],
+    "canoe": ["canoeing", "paddle boat", "watercraft"],
+    "life jacket": ["life vest", "flotation device", "safety vest"]
+  },
+  
+  "settings": {
+    "page_load_delay": 2,
+    "scroll_pause": 1,
+    "timeout_seconds": 15,
+    "max_pages": 3,
+    "handle_popups": false,
+    "close_ads": false,
+    "scroll_to_bottom": false,
+    "wait_for_lazy_images": false,
+    "click_load_more": false,
+    "prefer_api": false,
+    "prefer_beautifulsoup": false,
+    "use_selenium_fallback": true,
+    "force_selenium": true
+  },
+  
+  "pagination": {
+    "next_page": ".pagination .next, .pagination a[rel='next'], .load-more",
+    "page_param": "page",
+    "max_pages": 5
+  }
+}

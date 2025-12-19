@@ -1,0 +1,60 @@
+{
+  "platform_name": "newtokyo",
+  "platform_display_name": "New Tokyo Electronics",
+  "platform_type": "ecommerce",
+  "base_url": "https://newtokyo.pk",
+  "currency": "PKR",
+  "main_category": "Electronics",
+  "subcategory": "Home Appliances",
+  "seller_username": "newtokyo",
+  "seller_display_name": "New Tokyo Electronics",
+  "seller_profile_url": "https://newtokyo.pk",
+  
+  "selectors": {
+    "product_container": ".product-card, .js-product-card",
+    "title": ".product-card__title, h2.product-card__title",
+    "price": ".product-card__price-price--sale .money, .product-card__price .money",
+    "original_price": ".product-card__price-cross .money, strike .money",
+    "image": ".product-card__img",
+    "url": ".product-card-link, a.js-product-link",
+    "brand": ".brand, .product-brand, .manufacturer, .brand-name, .vendor, [class*='brand']",
+    "rating": ".rating, .star-rating, [class*='star'], .reviews",
+    "review_count": ".review-count, .reviews-count, [class*='review']",
+    "next_page": ".pagination a, a[href*='page'], [class*='next']"
+  },
+  
+  "category_paths": {
+    "default": "/",
+    "refrigerators": "/collections/refrigrator",
+    "air-conditioners": "/collections/ac",
+    "washing-machines": "/collections/washing-machine",
+    "led-tv": "/collections/led",
+    "microwave": "/collections/microwave",
+    "small-electronics": "/collections/small-electronics",
+    "heater": "/collections/heater",
+    "kitchen-appliances": "/collections/kitchen-appliances"
+  },
+  
+  "keywords": {
+    "Smartphones & Mobiles": ["mobile", "smartphone", "iphone", "samsung", "oppo", "xiaomi", "vivo", "huawei", "oneplus", "realme", "infinix", "tecno", "phone", "cell phone", "tablet", "ipad"],
+    "Laptops & Computers": ["laptop", "macbook", "desktop", "tablet", "gaming pc", "monitor", "computer", "notebook", "ultrabook", "chromebook", "workstation", "pc", "mac"],
+    "Audio & Accessories": ["earbuds", "headphones", "speaker", "mic", "microphone", "soundbar", "bluetooth", "wireless", "audio", "sound", "music", "earphone", "headset"],
+    "Mobile Accessories": ["charger", "power bank", "cover", "screen protector", "usb cable", "adapter", "phone case", "protector", "phone stand", "holder", "mobile charger", "cable", "wire"],
+    "Home Appliances (Large)": ["fridge", "refrigerator", "washing machine", "microwave", "dishwasher", "oven", "dryer", "freezer", "deep freezer", "washer", "front load", "top load", "twin tub"],
+    "Cooling & Heating": ["ac", "air conditioner", "fan", "room cooler", "heater", "geyser", "cooling", "heating", "ventilation", "air cooling", "1 ton", "1.5 ton", "2 ton", "air cooler", "cooler", "split ac", "window ac"],
+    "Kitchen Appliances (Small)": ["blender", "juicer", "cooker", "toaster", "coffee machine", "kettle", "mixer", "grinder", "food processor", "rice cooker", "pressure cooker", "air fryer", "electric kettle", "iron", "steamer"],
+    "Entertainment": ["television", "tv", "smart tv", "led", "home theater", "entertainment", "display", "screen", "32 inch", "43 inch", "50 inch", "55 inch", "sound system"]
+  },
+  
+  "settings": {
+    "page_load_delay": 20,
+    "scroll_pause": 8,
+    "max_retries": 3,
+    "timeout": 60,
+    "headless": true,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "scroll_to_bottom": true,
+    "click_load_more": false,
+    "wait_for_lazy_images": true
+  }
+}

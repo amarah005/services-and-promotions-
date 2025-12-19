@@ -1,45 +1,26 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import { StatusBar } from 'react-native'
+import React, { useEffect } from 'react'
+import Router from './src/navigations/Router'
+import { AuthProvider } from './src/contexts/AuthContext'
+import { configureGoogleSignIn } from './AppBackend/googleLogin'
+import { GOOGLE_WEB_CLIENT_ID } from './AppBackend/config'
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
-
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  return (
-    <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
-    </SafeAreaProvider>
-  );
-}
-
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
+const App = () => {
+  useEffect(() => {
+    // Initialize Google Sign-In when app starts
+    if (GOOGLE_WEB_CLIENT_ID && !GOOGLE_WEB_CLIENT_ID.includes('YOUR_GOOGLE_WEB_CLIENT_ID')) {
+      configureGoogleSignIn(GOOGLE_WEB_CLIENT_ID);
+    } else {
+      console.warn('Google Sign-In not configured. Set GOOGLE_WEB_CLIENT_ID in AppBackend/config.js');
+    }
+  }, []);
 
   return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
-    </View>
-  );
+    <AuthProvider>
+      <StatusBar backgroundColor='#F5F5F5' barStyle='dark-content' />
+      <Router />
+    </AuthProvider>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default App;
+export default App

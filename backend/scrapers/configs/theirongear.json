@@ -1,0 +1,80 @@
+{
+  "platform_name": "theirongear",
+  "platform_display_name": "IRONGEAR Fitness",
+  "platform_type": "ecommerce",
+  "base_url": "https://theirongear.com/",
+  "currency": "PKR",
+  "main_category": "Sports & Fitness",
+  "subcategory": "Sportswear",
+  "seller_username": "theirongear",
+  "seller_display_name": "IRONGEAR Fitness",
+  "seller_profile_url": "https://theirongear.com",
+  "api_endpoints": [
+    "products.json?page={page}"
+  ],
+  "api_parser": "shopify_products_json",
+  "category_paths": {
+    "default": "/",
+    "men": "/collections/men",
+    "women": "/collections/women",
+    "accessories": "/collections/accessories",
+    "new": "/collections/new-arrivals"
+  },
+  "selectors": {
+    "product_container": ".card, .product-grid-item, .grid__item",
+    "title": ".full-unstyled-link, .card__heading a",
+    "price": ".price-item, .price__regular .price-item",
+    "image": ".media img, img[loading]",
+    "url": ".full-unstyled-link, a[href*='/products/']",
+    "next_page": "a[href*='page=']"
+  },
+  "keywords": {
+    "Gym Equipment": [
+      "dumbbell", "treadmill", "bench press", "yoga mat",
+      "barbell", "kettlebell", "resistance band", "pull-up bar",
+      "rowing machine", "exercise bike", "elliptical", "medicine ball",
+      "foam roller", "weight plates", "smith machine", "squat rack", "jump rope"
+    ],
+    "Sports Gear": [
+      "cricket bat", "football", "hockey stick", "tennis racket",
+      "basketball", "volleyball", "badminton racket", "table tennis paddle",
+      "golf club", "rugby ball", "boxing gloves", "baseball bat",
+      "archery bow", "swimming goggles", "kickboard", "surfboard"
+    ],
+    "Sportswear": [
+      "tracksuit", "jersey", "shorts", "leggings",
+      "compression shirt", "running shoes", "football boots",
+      "training shoes", "socks", "headband", "wristband",
+      "hoodie", "tank top", "sweatpants", "cap"
+    ],
+    "Outdoor & Adventure": [
+      "tent", "camping", "hiking", "cycling",
+      "sleeping bag", "backpack", "trekking pole", "climbing rope",
+      "lantern", "binoculars", "compass", "camp stove",
+      "kayak", "canoe", "helmet", "life jacket"
+    ]
+  },
+  "synonyms": {
+    "dumbbell": ["dumbbells"],
+    "kettlebell": ["kettlebells"],
+    "resistance band": ["resistance bands", "exercise band", "exercise bands"],
+    "pull-up bar": ["pull up bar", "chin-up bar", "chin up bar"],
+    "exercise bike": ["spin bike", "stationary bike"],
+    "elliptical": ["cross trainer"],
+    "weight plates": ["weight plate", "plates"],
+    "smith machine": ["smith rack"],
+    "squat rack": ["power rack", "power cage"]
+  },
+  "settings": {
+    "page_load_delay": 2,
+    "scroll_pause": 1,
+    "timeout": 30,
+    "handle_popups": false,
+    "close_ads": false,
+    "wait_for_lazy_images": false,
+    "scroll_to_bottom": false,
+    "click_load_more": false
+  }
+}
+
+

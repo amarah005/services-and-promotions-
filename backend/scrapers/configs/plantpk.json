@@ -1,0 +1,50 @@
+{
+  "platform_name": "plantpk",
+  "platform_display_name": "Plant.Pk",
+  "platform_type": "ecommerce",
+  "base_url": "https://plant.pk",
+  "currency": "PKR",
+  "main_category": "Home & Living",
+  "subcategory": "Gardening & Outdoor",
+  "seller_username": "plantpk",
+  "seller_display_name": "Plant.Pk",
+  "seller_profile_url": "https://plant.pk",
+  "keywords": {
+    "Gardening & Outdoor": ["plant", "pot", "garden", "lawn", "outdoor furniture", "cactus", "succulent", "bonsai", "tree", "flower", "seed", "fertilizer", "tool", "decoration", "fountain", "bench", "shade", "irrigation", "landscaping", "indoor", "outdoor", "seasonal", "climber", "ground cover", "ceramic", "concrete", "plastic", "stainless", "mud", "grow bag"]
+  },
+  "category_paths": {
+    "default": "/",
+    "palm_trees": "/product-category/palm-trees/",
+    "flower_trees": "/product-category/flower-trees/",
+    "bonsai_plants": "/product-category/bonsai-plants/",
+    "wall_cover_plants": "/product-category/wall-cover-plants/",
+    "indoor_plants": "/product-category/indoor-plants/",
+    "planter_plants": "/product-category/planter-plants/",
+    "office_plants": "/product-category/office-plants/",
+    "bedroom_plants": "/product-category/bedroom-plants/",
+    "sitting_room_plants": "/product-category/sitting-room-plants/",
+    "kitchen_plants": "/product-category/kitchen-plants/"
+  },
+  "selectors": {
+    "product_container": "li.product",
+    "title": "h2.woo-loop-product__title a, .woo-loop-product__title a",
+    "price": ".price .woocommerce-Price-amount, .price span.woocommerce-Price-amount",
+    "image": ".mf-product-thumbnail img, .attachment-woocommerce_thumbnail",
+    "url": "h2.woo-loop-product__title a, .woo-loop-product__title a",
+    "brand": ".brand, .product-brand, .manufacturer",
+    "rating": ".star-rating, .mf-rating .star-rating",
+    "review_count": ".count, .mf-rating .count",
+    "next_page": ".next, .woocommerce-pagination .next, .page-numbers .next, .pagination .next"
+  },
+  "settings": {
+    "page_load_delay": 8,
+    "scroll_pause": 2.0,
+    "timeout": 90,
+    "wait_for_lazy_images": true,
+    "scroll_to_bottom": true,
+    "click_load_more": false,
+    "handle_popups": true,
+    "close_ads": true,
+    "wait_for_ads": 3
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "platform_name": "alisports",
+  "platform_display_name": "Ali Sports",
+  "platform_type": "ecommerce",
+  "base_url": "https://www.alisports.pk/",
+  "currency": "PKR",
+  "main_category": "Sports & Fitness",
+  "subcategory": "Sports Gear",
+  "seller_username": "alisports",
+  "seller_display_name": "Ali Sports",
+  "seller_profile_url": "https://www.alisports.pk",
+  "keywords": {
+    "Gym Equipment": [
+      "dumbbell", "treadmill", "bench press", "yoga mat",
+      "barbell", "kettlebell", "resistance band", "pull-up bar",
+      "rowing machine", "exercise bike", "elliptical", "medicine ball",
+      "foam roller", "weight plates", "smith machine", "squat rack", "jump rope"
+    ],
+    "Sports Gear": [
+      "cricket bat", "football", "hockey stick", "tennis racket",
+      "basketball", "volleyball", "badminton racket", "table tennis paddle",
+      "golf club", "rugby ball", "boxing gloves", "baseball bat",
+      "archery bow", "swimming goggles", "kickboard", "surfboard"
+    ],
+    "Sportswear": [
+      "tracksuit", "jersey", "shorts", "leggings",
+      "compression shirt", "running shoes", "football boots",
+      "training shoes", "socks", "headband", "wristband",
+      "hoodie", "tank top", "sweatpants", "cap"
+    ],
+    "Outdoor & Adventure": [
+      "tent", "camping", "hiking", "cycling",
+      "sleeping bag", "backpack", "trekking pole", "climbing rope",
+      "lantern", "binoculars", "compass", "camp stove",
+      "kayak", "canoe", "helmet", "life jacket"
+    ]
+  },
+  "category_paths": {
+    "default": "/collections/all",
+    "all": "/collections/all",
+    "sports": "/collections/sports",
+    "fitness": "/collections/fitness",
+    "accessories": "/collections/accessories",
+    "men": "/collections/men",
+    "women": "/collections/women",
+    "sale": "/collections/sale"
+  },
+  "selectors": {
+    "product_container": ".grid__item, .product-grid-item, .card--standard, .card-wrapper",
+    "title": ".full-unstyled-link, .card__heading a, .card-information__text a",
+    "price": ".price-item.price-item--regular, .price__regular .price-item, .price, .product-price",
+    "image": ".media img, .product-image img, img[loading]",
+    "url": ".full-unstyled-link, a[href*='/products/']",
+    "brand": ".product-vendor, .brand, .product-brand",
+    "rating": ".jdgm-prev-badge, .spr-starrating",
+    "review_count": ".jdgm-prev-badge__text, .spr-badge-caption",
+    "next_page": ".pagination .next, .page-numbers .next, a[rel='next'], .t4s-pagination .next, .page-numbers a, .pagination a"
+  },
+  "settings": {
+    "page_load_delay": 8,
+    "scroll_pause": 2.0,
+    "timeout": 90,
+    "wait_for_lazy_images": true,
+    "scroll_to_bottom": true,
+    "click_load_more": false,
+    "handle_popups": true,
+    "close_ads": true,
+    "wait_for_ads": 3
+  }
+}
+

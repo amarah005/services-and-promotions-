@@ -1,0 +1,140 @@
+{
+  "platform_name": "PakWheels",
+  "platform_display_name": "PakWheels.com",
+  "platform_type": "marketplace",
+  "platform_base_url": "https://www.pakwheels.com",
+  "base_url": "https://www.pakwheels.com",
+  "category_paths": {
+    "cars": [
+      "/used-cars/automatic/57336",
+      "/used-cars/imported/57428", 
+      "/used-cars/jeep/72893",
+      "/used-cars/hybrid/57335",
+      "/used-cars/diesel/57337",
+      "/used-cars/small/266374",
+      "/used-cars/old/430603",
+      "/used-cars/sports/72786",
+      "/used-cars/suzuki/32",
+      "/used-cars/toyota/33",
+      "/used-cars/honda/14",
+      "/used-cars/daihatsu/12",
+      "/used-cars/nissan/26",
+      "/used-cars/hyundai/15",
+      "/used-cars/kia/19",
+      "/used-cars/mitsubishi/25",
+      "/used-cars/changan/47",
+      "/used-cars/haval/714237",
+      "/used-cars/mercedes-benz/23",
+      "/used-cars/mg/121559",
+      "/used-cars/audi/41",
+      "/used-cars/faw/56",
+      "/used-cars/bmw/8",
+      "/used-cars/mazda/22",
+      "/used-cars/dfsk/59",
+      "/used-cars/lexus/21",
+      "/used-cars/prince/385797",
+      "/used-cars/proton/27977",
+      "/used-cars/jac/183065",
+      "/used-cars/peugeot/28",
+      "/used-cars/chevrolet/10",
+      "/used-cars/subaru/31"
+    ],
+    "bikes": [
+      "/used-bikes/suzuki/32",
+      "/used-bikes/honda/14", 
+      "/used-bikes/yamaha/34",
+      "/used-bikes/bajaj/35",
+      "/used-bikes/hero/36",
+      "/used-bikes/uni/37"
+    ]
+  },
+  "selectors": {
+    "product_container": ".well.search-list.clearfix.ad-container",
+    "product_title": ".search-title a.car-name",
+    "product_price": ".price-details.generic-dark-grey",
+    "product_image": ".gallery .img-content img.pic",
+    "product_url": ".search-title a.car-name",
+    "product_description": ".search-title a.car-name h3",
+    "product_location": ".search-vehicle-info li:first-child",
+    "product_year": ".search-vehicle-info-2 li:first-child",
+    "product_mileage": ".search-vehicle-info-2 li:nth-child(2)",
+    "product_condition": ".ad-specs li",
+    "product_fuel": ".search-vehicle-info-2 li:nth-child(3)",
+    "product_transmission": ".search-vehicle-info-2 li:nth-child(5)",
+    "product_engine": ".search-vehicle-info-2 li:nth-child(4)",
+    "product_color": ".ad-specs li",
+    "product_features": ".ad-specs",
+    "seller_name": ".ad-specs",
+    "seller_phone": ".phone_number_btn",
+    "listing_date": ".dated",
+    "product_images": ".gallery li img.pic",
+    "product_gallery": ".gallery",
+    "product_specs": ".search-vehicle-info-2",
+    "product_location_info": ".search-vehicle-info",
+    "featured_badge": ".featured-ribbon",
+    "save_button": ".save-ad",
+    "phone_button": ".phone_number_btn",
+    "message_button": ".btn-secondary"
+  },
+  "pagination": {
+    "next_page": ".pagination .next a",
+    "page_numbers": ".pagination .page-numbers a",
+    "max_pages": 50
+  },
+  "search": {
+    "search_url": "/used-cars/search",
+    "search_param": "q",
+    "filters": {
+      "make": "make",
+      "model": "model", 
+      "city": "city",
+      "price_min": "price_min",
+      "price_max": "price_max",
+      "year_min": "year_min",
+      "year_max": "year_max",
+      "fuel": "fuel",
+      "transmission": "transmission",
+      "body_type": "body_type"
+    }
+  },
+  "keywords": {
+    "cars": [
+      "honda", "toyota", "suzuki", "car for sale", "used car", "new car",
+      "sedan", "hatchback", "suv", "civic", "corolla", "mehran", "alto", "cultus",
+      "wagon r", "land cruiser", "prado", "gli", "vitz", "aqua", "accord",
+      "swift", "brv", "vezel", "hybrid car", "electric car", "automatic", "diesel",
+      "imported", "jeep", "sports car", "old car", "small car", "family car"
+    ],
+    "bikes": [
+      "honda bike", "yamaha bike", "suzuki bike", "superstar bike", "motorcycle",
+      "bajaj", "sports bike", "scooter", "bike for sale", "used bike",
+      "125cc", "70cc", "heavy bike", "electric bike", "harley davidson", "cd 70"
+    ]
+  },
+  "synonyms": {
+    "car": ["vehicle", "automobile", "auto"],
+    "bike": ["motorcycle", "bike", "scooter"],
+    "used": ["second hand", "pre owned", "old"],
+    "automatic": ["auto", "at"],
+    "manual": ["mt", "stick shift"],
+    "diesel": ["diesel engine"],
+    "petrol": ["gasoline", "gas"],
+    "hybrid": ["hybrid car", "electric hybrid"],
+    "suv": ["sport utility vehicle", "off road"],
+    "sedan": ["saloon", "four door"],
+    "hatchback": ["hatch", "small car"],
+    "convertible": ["cabriolet", "open top"],
+    "coupe": ["two door", "sports car"]
+  },
+  "settings": {
+    "delay_between_requests": 2,
+    "timeout": 30,
+    "max_retries": 3,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    "handle_popups": false,
+    "close_ads": false,
+    "scroll_to_bottom": false,
+    "wait_for_dynamic_content": true,
+    "dynamic_wait_time": 5
+  }
+}

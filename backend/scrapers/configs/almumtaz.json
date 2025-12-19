@@ -1,0 +1,58 @@
+{
+  "platform_name": "almumtaz",
+  "platform_display_name": "Al Mumtaz Electronics",
+  "platform_type": "ecommerce",
+  "base_url": "https://www.almumtaz.com.pk",
+  "currency": "PKR",
+  "main_category": "Electronics",
+  "subcategory": "Electronics & Technology",
+  "seller_username": "almumtaz",
+  "seller_display_name": "Al Mumtaz Electronics",
+  "seller_profile_url": "https://www.almumtaz.com.pk",
+  
+  "selectors": {
+    "product_container": ".product-wrapper",
+    "title": ".product-title a, h3 a, .product-name a",
+    "price": ".price",
+    "image": ".product-image-link img, .attachment-woocommerce_thumbnail",
+    "url": ".product-image-link, .product-title a",
+    "brand": ".brand, .product-brand, .manufacturer",
+    "rating": ".star-rating, .woocommerce-product-rating .star-rating, .rating-stars",
+    "review_count": ".woocommerce-review-link, .review-count, .reviews-count",
+    "next_page": ".next, .page-numbers.next, .pagination-next"
+  },
+  
+  "category_paths": {
+    "default": "/",
+    "smartphones-mobiles": "/product-category/smartphones-mobiles/",
+    "laptops-computers": "/product-category/laptops-computers/",
+    "audio-accessories": "/product-category/audio-accessories/",
+    "mobile-accessories": "/product-category/mobile-accessories/",
+    "home-appliances-large": "/product-category/home-appliances/",
+    "cooling-heating": "/product-category/cooling-heating/",
+    "kitchen-appliances-small": "/product-category/kitchen-appliances/",
+    "air-conditioners": "/product-category/air-conditioners/",
+    "refrigerators": "/product-category/refrigerators/",
+    "washing-machines": "/product-category/washing-machines/",
+    "microwaves": "/product-category/microwaves/",
+    "electronics": "/product-category/electronics/"
+  },
+  
+  "keywords": {
+    "Smartphones & Mobiles": ["mobile", "smartphone", "iphone", "samsung", "oppo", "xiaomi", "vivo", "huawei", "oneplus", "realme", "infinix", "tecno", "phone", "cell phone"],
+    "Laptops & Computers": ["laptop", "macbook", "desktop", "tablet", "gaming pc", "monitor", "computer", "notebook", "ultrabook", "chromebook", "workstation", "pc", "mac"],
+    "Audio & Accessories": ["earbuds", "headphones", "speaker", "mic", "microphone", "soundbar", "bluetooth", "wireless", "audio", "sound", "music", "earphone", "headset"],
+    "Mobile Accessories": ["charger", "power bank", "cover", "screen protector", "usb cable", "adapter", "phone case", "protector", "phone stand", "holder", "mobile charger", "cable", "wire"],
+    "Home Appliances (Large)": ["fridge", "refrigerator", "washing machine", "microwave", "dishwasher", "oven", "dryer", "freezer", "deep freezer", "washer", "front load", "top load", "twin tub"],
+    "Cooling & Heating": ["ac", "air conditioner", "fan", "room cooler", "heater", "geyser", "cooling", "heating", "ventilation", "air cooling", "1 ton", "1.5 ton", "2 ton", "air cooler", "cooler", "split ac", "window ac"],
+    "Kitchen Appliances (Small)": ["blender", "juicer", "cooker", "toaster", "coffee machine", "kettle", "mixer", "grinder", "food processor", "rice cooker", "pressure cooker", "air fryer", "electric kettle", "iron", "steamer"],
+    "Entertainment": ["television", "tv", "smart tv", "led", "home theater", "entertainment", "display", "screen", "32 inch", "43 inch", "50 inch", "55 inch", "sound system"]
+  },
+  
+  "settings": {
+    "page_load_delay": 2,
+    "scroll_pause": 1,
+    "max_retries": 3,
+    "timeout": 10
+  }
+}

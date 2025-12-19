@@ -1,0 +1,59 @@
+{
+  "platform_name": "toygenix",
+  "platform_display_name": "Toygenix",
+  "platform_type": "ecommerce",
+  "base_url": "https://toygenix.com.pk",
+  "currency": "PKR",
+  "main_category": "Toys & Games",
+  "subcategory": "Outdoor Toys",
+  "seller_username": "toygenix",
+  "seller_display_name": "Toygenix",
+  "seller_profile_url": "https://toygenix.com.pk",
+  
+  "selectors": {
+    "product_container": "[class*='product']",
+    "title": "h3, h4, .product-title, .title, .name, a",
+    "price": ".price, .cost, .amount, [class*='price']",
+    "original_price": "del, .old-price, .was-price, .line-through",
+    "image": "img, .product-image img, .item-image img",
+    "url": "a, .product-link, .item-link",
+    "brand": ".brand, .product-brand, .manufacturer, [class*='brand']",
+    "rating": ".rating, .star-rating, .stars, [class*='rating']",
+    "review_count": ".review-count, .reviews, [class*='review']",
+    "next_page": ".pagination a, .page-numbers a, [class*='next']"
+  },
+  
+  "category_paths": {
+    "default": "/",
+    "outdoor-toys": "/collections/outdoor-toys",
+    "educational-toys": "/collections/educational-toys",
+    "dolls-action-figures": "/collections/dolls-action-figures",
+    "board-games": "/collections/board-games",
+    "baby-toys": "/collections/baby-toys",
+    "puzzles": "/collections/puzzles",
+    "building-blocks": "/collections/building-blocks"
+  },
+  
+  "keywords": {
+    "Educational Toys": ["lego", "puzzle", "blocks", "robotics kit", "building set", "flash cards", "abacus", "shape sorter", "science kit", "math toy", "magnetic tiles", "stacking toy", "educational", "learning", "brain", "cognitive"],
+    "Dolls & Action Figures": ["barbie", "doll", "stuffed toy", "action figure", "teddy bear", "plush toy", "superhero figure", "baby doll", "fashion doll", "robot toy", "transformer", "figurine", "princess", "character"],
+    "Board & Indoor Games": ["ludo", "chess", "carrom", "monopoly", "scrabble", "uno", "snake and ladder", "jenga", "playing cards", "checkers", "pictionary", "dominoes", "board game", "card game", "puzzle game"],
+    "Outdoor Toys": ["scooter", "remote car", "bike toy", "swing", "skateboard", "roller skates", "tricycle", "kite", "football toy", "basketball hoop", "sandbox set", "water gun", "outdoor", "sports", "activity"]
+  },
+  
+  "settings": {
+    "page_load_delay": 20,
+    "scroll_pause": 5,
+    "max_retries": 3,
+    "timeout": 30,
+    "headless": true,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "scroll_to_bottom": false,
+    "click_load_more": false,
+    "wait_for_lazy_images": true,
+    "image_load_delay": 3,
+    "lazy_image_attributes": ["data-src", "data-original", "data-lazy", "data-srcset"],
+    "validate_urls": true,
+    "prefer_product_urls": true
+  }
+}

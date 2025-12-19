@@ -1,0 +1,58 @@
+{
+  "platform_name": "aenzayhomes",
+  "platform_display_name": "AenZay Homes",
+  "base_url": "https://aenzayhomes.pk",
+  "platform_type": "ecommerce",
+  "main_category": "Home & Living",
+  "subcategory": "Home Decor",
+  "seller_username": "aenzayhomes",
+  "seller_display_name": "AenZay Homes",
+  "seller_profile_url": "https://aenzayhomes.pk",
+  "selectors": {
+    "product_container": ".aux-col.product, .product.type-product, .woocommerce-loop-product__link",
+    "title": ".auxshp-title-heading, .auxshp-label, h3, .woocommerce-loop-product__title",
+    "price": ".woocommerce-Price-amount, .price ins .woocommerce-Price-amount, .price .amount",
+    "original_price": ".price del .woocommerce-Price-amount, .price del .amount",
+    "image": ".auxshp-product-image, .woocommerce-loop-product__link img, img[src], img[data-src]",
+    "url": ".woocommerce-loop-product__link, .auxshp-label",
+    "brand": "AenZay Homes",
+    "next_page": ".woocommerce-pagination .next, .pagination .next, .next-page, a[rel='next'], .load-more"
+  },
+  "category_paths": {
+    "Furniture": "/product-category/furniture",
+    "Home Decor": "/product-category/decoration-piece",
+    "Kitchen & Dining": "/product-category/kitchen-accessories",
+    "Gardening & Outdoor": "/product-category/decoration-piece/planters-pakistan"
+  },
+  "subcategory_paths": {
+    "Furniture": "/product-category/furniture",
+    "Home Decor": "/product-category/decoration-piece",
+    "Kitchen & Dining": "/product-category/kitchen-accessories",
+    "Gardening & Outdoor": "/product-category/decoration-piece/planters-pakistan",
+    "Lighting": "/product-category/lighting",
+    "Bedroom": "/product-category/decorative-bedroom-accessories",
+    "Bathroom": "/product-category/bathroom-accessories",
+    "Sale": "/product-category/sale"
+  },
+  "keywords": {
+    "Furniture": ["sofa", "bed", "wardrobe", "table", "chair", "almirah", "furniture", "wood", "wooden", "couch", "settee", "mattress", "headboard", "bed frame", "armchair", "dining chair", "office chair", "stool", "side table", "coffee table", "dining table", "desk", "chest", "drawers"],
+    "Home Decor": ["carpet", "curtain", "lamp", "mirror", "painting", "wall clock", "decor", "decoration", "rug", "cushion", "pillow", "vase", "art", "frame", "lighting", "chandelier", "pendant", "floor lamp", "table lamp", "wall light", "ornament", "sculpture", "bookend", "candle", "clock"],
+    "Kitchen & Dining": ["cookware", "utensils", "crockery", "dinner set", "kitchen", "dining", "plate", "bowl", "cup", "mug", "glass", "cutlery", "knife", "fork", "spoon", "pot", "pan", "tray", "jar", "spice", "soup", "serving", "skewer", "ceramic"],
+    "Gardening & Outdoor": ["plant", "pot", "garden", "lawn", "outdoor furniture", "garden", "outdoor", "patio", "balcony", "terrace", "garden chair", "garden table", "plant pot", "flower pot", "garden tool", "watering can", "garden light", "outdoor lighting", "planter"]
+  },
+  "settings": {
+    "page_load_delay": 5,
+    "scroll_pause": 3,
+    "image_load_delay": 2,
+    "click_load_more": false,
+    "scroll_increment": 200,
+    "scroll_pause_between": 1,
+    "max_scroll_attempts": 1,
+    "wait_for_images": false,
+    "image_visibility_check": false,
+    "max_image_retries": 1,
+    "timeout": 15,
+    "retry_attempts": 1,
+    "retry_delay": 2
+  }
+}

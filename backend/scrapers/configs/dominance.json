@@ -1,0 +1,104 @@
+{
+  "platform_name": "dominance",
+  "platform_display_name": "Dominance.pk",
+  "platform_type": "ecommerce",
+  "base_url": "https://www.dominance.pk",
+  "currency": "PKR",
+  "main_category": "Sports & Fitness",
+  "subcategory": "Outdoor & Adventure",
+  "seller_username": "dominance",
+  "seller_display_name": "Dominance.pk",
+  "seller_profile_url": "https://www.dominance.pk",
+  
+  "category_paths": {
+    "Outdoor & Adventure": {
+      "Biker Gear": "/collections/all/",
+      "Backpacks": "/collections/all/",
+      "Gloves": "/collections/all/",
+      "Outdoor Equipment": "/collections/all/",
+      "Travel Gear": "/collections/all/",
+      "Camping": "/collections/all/",
+      "Hiking": "/collections/all/",
+      "Adventure": "/collections/all/"
+    }
+  },
+  
+  "selectors": {
+    "product_container": ".product, .product-item, .grid-item, .product-inner, .product-card, .product-card__wrapper, .product-item__wrapper",
+    "product_name": ".product-title, .product-name, h2, h3, .product-name, .title, .product-card__title, .product-item__title, .product__title",
+    "product_url": "a[href*='/products/'], .product-link, .product-img",
+    "product_price": ".price, .product-price, .money, .price-current, .amount",
+    "product_image": "img, .product-image img, img[src*='products'], img[src*='uploads'], img[src*='cdn'], .product-img img",
+    "product_description": ".product-description, .product-summary, .description, .product-excerpt",
+    "product_availability": ".availability, .stock-status, .in-stock, .out-of-stock",
+    "product_brand": ".brand, .product-brand, .manufacturer, .vendor",
+    "product_sku": ".sku, .product-sku, .variant-sku, .product-code"
+  },
+  
+  "api_endpoints": {
+    "products": "/products.json",
+    "collections": "/collections.json"
+  },
+  
+  "api_parser": {
+    "products": "parse_shopify_products",
+    "collections": "parse_shopify_collections"
+  },
+  
+  "keywords": {
+    "Outdoor & Adventure": [
+      "tent", "camping", "hiking", "cycling", "sleeping bag", "backpack", 
+      "trekking pole", "climbing rope", "lantern", "binoculars", "compass", 
+      "camp stove", "kayak", "canoe", "helmet", "life jacket", "jacket",
+      "goggles", "sunglasses", "knife", "headlamp", "water bottle", "chair",
+      "biker", "gloves", "torch", "flashlight", "waist bag", "compression socks",
+      "outdoor", "adventure", "travel", "gear", "equipment"
+    ]
+  },
+  
+  "synonyms": {
+    "tent": ["camping tent", "hiking tent", "backpacking tent", "dome tent"],
+    "backpack": ["rucksack", "hiking pack", "trekking pack", "mountaineering pack", "travel bag"],
+    "sleeping bag": ["sleeping system", "camping bag", "hiking bag"],
+    "trekking pole": ["walking pole", "hiking pole", "trekking stick", "hiking stick"],
+    "climbing rope": ["dynamic rope", "static rope", "mountaineering rope"],
+    "helmet": ["climbing helmet", "safety helmet", "protection helmet", "bike helmet"],
+    "lantern": ["camping light", "outdoor light", "portable light", "torch", "flashlight"],
+    "compass": ["navigation compass", "outdoor compass", "hiking compass"],
+    "camp stove": ["portable stove", "camping stove", "outdoor stove"],
+    "jacket": ["windbreaker", "waterproof jacket", "hiking jacket", "outdoor jacket"],
+    "goggles": ["safety goggles", "tactical goggles", "outdoor goggles"],
+    "knife": ["survival knife", "camping knife", "outdoor knife"],
+    "headlamp": ["head torch", "camping light", "hiking light", "flashlight"],
+    "water bottle": ["hydration bottle", "camping bottle", "hiking bottle"],
+    "biker": ["motorcycle", "bike", "cycling", "biker gear"],
+    "gloves": ["biker gloves", "cycling gloves", "outdoor gloves", "half finger gloves"],
+    "torch": ["flashlight", "camping light", "outdoor light", "led torch"],
+    "waist bag": ["fanny pack", "belt bag", "travel bag", "outdoor bag"],
+    "compression socks": ["hiking socks", "trekking socks", "outdoor socks"],
+    "outdoor": ["camping", "hiking", "outdoor gear", "adventure gear", "wilderness"],
+    "adventure": ["outdoor", "camping", "hiking", "adventure gear", "wilderness"]
+  },
+  
+  "settings": {
+    "page_load_delay": 2,
+    "scroll_pause": 1,
+    "timeout_seconds": 15,
+    "max_pages": 3,
+    "handle_popups": false,
+    "close_ads": false,
+    "scroll_to_bottom": false,
+    "wait_for_lazy_images": false,
+    "click_load_more": false,
+    "prefer_api": true,
+    "prefer_beautifulsoup": true,
+    "use_selenium_fallback": false,
+    "force_beautifulsoup": true
+  },
+  
+  "pagination": {
+    "next_page": ".pagination .next, .pagination a[rel='next'], .load-more, .pagination-next",
+    "page_param": "page",
+    "max_pages": 5
+  }
+}

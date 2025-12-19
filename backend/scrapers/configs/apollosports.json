@@ -1,0 +1,51 @@
+{
+  "platform_name": "apollosports",
+  "platform_display_name": "Apollo Sports",
+  "platform_type": "ecommerce",
+  "base_url": "https://apollosports.pk/",
+  "currency": "PKR",
+  "main_category": "Sports & Fitness",
+  "subcategory": "Gym Equipment",
+  "seller_username": "apollosports",
+  "seller_display_name": "Apollo Sports",
+  "seller_profile_url": "https://apollosports.pk",
+  "keywords": {
+    "Gym Equipment": ["dumbbell", "treadmill", "bench press", "yoga mat"],
+    "Sports Gear": ["cricket bat", "football", "hockey stick", "tennis racket"],
+    "Sportswear": ["tracksuit", "jersey", "shorts", "leggings"],
+    "Outdoor & Adventure": ["tent", "camping", "hiking", "cycling"]
+  },
+  "category_paths": {
+    "default": "/",
+    "shop": "/shop/",
+    "men": "/collections/mens",
+    "women": "/collections/womens",
+    "fitness": "/collections/fitness",
+    "sports": "/collections/sports",
+    "accessories": "/collections/accessories",
+    "brands": "/collections/brands",
+    "sale": "/collections/sale"
+  },
+  "selectors": {
+    "product_container": ".t4s-product, .t4s-pr-grid, .t4s-col-item",
+    "title": ".t4s-product-title a",
+    "price": ".t4s-product-price",
+    "image": ".t4s-product-main-img",
+    "url": ".t4s-full-width-link",
+    "brand": ".brand, .product-brand, .manufacturer",
+    "rating": ".t4s-product-rating, .jdgm-prev-badge",
+    "review_count": ".jdgm-prev-badge__text",
+    "next_page": ".next, .woocommerce-pagination .next, .page-numbers .next, .pagination .next, .page-numbers a, .pagination a"
+  },
+  "settings": {
+    "page_load_delay": 15,
+    "scroll_pause": 3.0,
+    "timeout": 120,
+    "wait_for_lazy_images": true,
+    "scroll_to_bottom": true,
+    "click_load_more": false,
+    "handle_popups": true,
+    "close_ads": true,
+    "wait_for_ads": 5
+  }
+}

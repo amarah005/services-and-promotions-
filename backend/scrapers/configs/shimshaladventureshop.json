@@ -1,0 +1,95 @@
+{
+  "platform_name": "shimshaladventureshop",
+  "platform_display_name": "Shimshal Adventure Shop",
+  "platform_type": "ecommerce",
+  "base_url": "https://www.shimshaladventureshop.com",
+  "currency": "PKR",
+  "main_category": "Sports & Fitness",
+  "subcategory": "Outdoor & Adventure",
+  "seller_username": "shimshaladventureshop",
+  "seller_display_name": "Shimshal Adventure Shop",
+  "seller_profile_url": "https://www.shimshaladventureshop.com",
+  
+  "category_paths": {
+    "Outdoor & Adventure": {
+      "Hiking Gear": "/product-category/hiking-gear/",
+      "Camping Gear": "/product-category/camping-gear/",
+      "Climbing Gear": "/product-category/climbing-gear/",
+      "Travel Gear": "/product-category/travel-gear/",
+      "Clothing": "/product-category/clothing/",
+      "Footwear": "/product-category/footwear/",
+      "Backpacks": "/product-category/backpacks/",
+      "Glasses & Goggles": "/product-category/glasses-goggles/"
+    }
+  },
+  
+  "selectors": {
+    "product_container": ".product-item, .grid-product-item, .product-card, .product, .product-grid-item, .woocommerce-loop-product__link",
+    "product_name": ".product-title, .product-name, h3, h4, .title, .woocommerce-loop-product__title",
+    "product_url": "a[href*='/product/'], .product-link, .woocommerce-loop-product__link",
+    "product_price": ".price, .product-price, .money, .price-current, .price-now, .price-value, .woocommerce-Price-amount",
+    "product_image": "img[src*='products'], .product-image img, .grid-product-image img, .product-photo img, .woocommerce-loop-product__link img",
+    "product_description": ".product-description, .product-summary, .description, .product-excerpt",
+    "product_availability": ".availability, .stock-status, .in-stock, .out-of-stock, .product-availability",
+    "product_brand": ".brand, .product-brand, .manufacturer, .vendor",
+    "product_sku": ".sku, .product-sku, .variant-sku, .product-code"
+  },
+  
+  "api_endpoints": {
+    "products": "/wp-json/wc/v3/products",
+    "categories": "/wp-json/wc/v3/products/categories"
+  },
+  
+  "api_parser": {
+    "products": "parse_woocommerce_products",
+    "categories": "parse_woocommerce_categories"
+  },
+  
+  "keywords": {
+    "Outdoor & Adventure": [
+      "tent", "camping", "hiking", "cycling", "sleeping bag", "backpack", 
+      "trekking pole", "climbing rope", "lantern", "binoculars", "compass", 
+      "camp stove", "kayak", "canoe", "helmet", "life jacket", "jacket",
+      "goggles", "sunglasses", "knife", "headlamp", "water bottle", "chair"
+    ]
+  },
+  
+  "synonyms": {
+    "tent": ["camping tent", "hiking tent", "backpacking tent", "dome tent"],
+    "backpack": ["rucksack", "hiking pack", "trekking pack", "mountaineering pack"],
+    "sleeping bag": ["sleeping system", "camping bag", "hiking bag"],
+    "trekking pole": ["walking pole", "hiking pole", "trekking stick", "hiking stick"],
+    "climbing rope": ["dynamic rope", "static rope", "mountaineering rope"],
+    "helmet": ["climbing helmet", "safety helmet", "protection helmet"],
+    "lantern": ["camping light", "outdoor light", "portable light"],
+    "compass": ["navigation compass", "outdoor compass", "hiking compass"],
+    "camp stove": ["portable stove", "camping stove", "outdoor stove"],
+    "jacket": ["windbreaker", "waterproof jacket", "hiking jacket", "outdoor jacket"],
+    "goggles": ["safety goggles", "tactical goggles", "outdoor goggles"],
+    "knife": ["survival knife", "camping knife", "outdoor knife"],
+    "headlamp": ["head torch", "camping light", "hiking light"],
+    "water bottle": ["hydration bottle", "camping bottle", "hiking bottle"]
+  },
+  
+  "settings": {
+    "page_load_delay": 2,
+    "scroll_pause": 1,
+    "timeout_seconds": 15,
+    "max_pages": 3,
+    "handle_popups": false,
+    "close_ads": false,
+    "scroll_to_bottom": false,
+    "wait_for_lazy_images": false,
+    "click_load_more": false,
+    "prefer_api": true,
+    "prefer_beautifulsoup": true,
+    "use_selenium_fallback": false,
+    "force_beautifulsoup": true
+  },
+  
+  "pagination": {
+    "next_page": ".pagination .next, .pagination a[rel='next'], .load-more, .woocommerce-pagination .next",
+    "page_param": "page",
+    "max_pages": 5
+  }
+}

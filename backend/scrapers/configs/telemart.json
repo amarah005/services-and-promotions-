@@ -1,0 +1,62 @@
+{
+  "platform_name": "telemart",
+  "platform_display_name": "Telemart",
+  "platform_type": "ecommerce",
+  "base_url": "https://telemart.pk",
+  "currency": "PKR",
+  "main_category": "Electronics",
+  "subcategory": "Electronics & Technology",
+  "seller_username": "telemart",
+  "seller_display_name": "Telemart",
+  "seller_profile_url": "https://telemart.pk",
+  
+      "selectors": {
+        "product_container": "div.product-card, div[class*='product'], li[class*='product'], a[href*='/product/'], a[href*='-']",
+        "title": ".line-clamp-2, h4.product-title-size, .product-title, h3, h2, [class*='title']",
+        "price": "span.text-green-600, .price, [class*='price']:not(.line-through)",
+        "original_price": "del.text-red-500, del, .line-through, .old-price",
+        "image": "img.v-lazy-image, img[data-src], img[data-original], img[data-lazy], img[srcset], picture source[data-srcset]",
+        "url": "self, .product-title a, a[href*='/product/'], a[href$='.html'], a[href*='-']",
+        "brand": ".brand, .product-brand, .manufacturer, .brand-name, .vendor, .make, [class*='brand'], .product-vendor",
+        "rating": "span.bg-green-500.text-white, span[class*='bg-green-500'], .rating, .stars",
+        "review_count": "span.text-gray-500, span[class*='text-gray-500'], .review-count, .reviews",
+        "next_page": ".load-more, .pagination a, .page-numbers a, [class*='next'], [class*='pagination'] a, .page-nav a, button[class*='load'], .show-more"
+      },
+  
+  "category_paths": {
+    "default": "/",
+    "mobile-and-tablets": "/mobile-and-tablets.html",
+    "home-appliances": "/home-and-kitchen-appliances.html",
+    "tv-video": "/tv-video.html",
+    "computer-gaming": "/computer.html",
+    "camera": "/camera.html",
+    "home-audio": "/home-audio-theaters.html"
+  },
+  
+  "keywords": {
+    "Smartphones & Mobiles": ["mobile", "smartphone", "iphone", "samsung", "oppo", "xiaomi", "vivo", "huawei", "oneplus", "realme", "infinix", "tecno", "phone", "cell phone", "tablet", "ipad"],
+    "Laptops & Computers": ["laptop", "macbook", "desktop", "tablet", "gaming pc", "monitor", "computer", "notebook", "ultrabook", "chromebook", "workstation", "pc", "mac"],
+    "Audio & Accessories": ["earbuds", "headphones", "speaker", "mic", "microphone", "soundbar", "bluetooth", "wireless", "audio", "sound", "music", "earphone", "headset"],
+    "Mobile Accessories": ["charger", "power bank", "cover", "screen protector", "usb cable", "adapter", "phone case", "protector", "phone stand", "holder", "mobile charger", "cable", "wire"],
+    "Home Appliances (Large)": ["fridge", "refrigerator", "washing machine", "microwave", "dishwasher", "oven", "dryer", "freezer", "deep freezer", "washer", "front load", "top load", "twin tub"],
+    "Cooling & Heating": ["ac", "air conditioner", "fan", "room cooler", "heater", "geyser", "cooling", "heating", "ventilation", "air cooling", "1 ton", "1.5 ton", "2 ton", "air cooler", "cooler", "split ac", "window ac"],
+    "Kitchen Appliances (Small)": ["blender", "juicer", "cooker", "toaster", "coffee machine", "kettle", "mixer", "grinder", "food processor", "rice cooker", "pressure cooker", "air fryer", "electric kettle", "iron", "steamer"],
+    "Entertainment": ["television", "tv", "smart tv", "led", "home theater", "entertainment", "display", "screen", "32 inch", "43 inch", "50 inch", "55 inch", "sound system"]
+  },
+  
+      "settings": {
+        "page_load_delay": 30,
+        "scroll_pause": 10,
+        "max_retries": 5,
+        "timeout": 75,
+        "headless": false,
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "scroll_to_bottom": true,
+        "click_load_more": true,
+        "wait_for_lazy_images": true,
+        "image_load_delay": 6,
+        "lazy_image_attributes": ["data-src", "data-original", "data-lazy", "data-srcset"],
+        "validate_urls": true,
+        "prefer_product_urls": true
+      }
+}

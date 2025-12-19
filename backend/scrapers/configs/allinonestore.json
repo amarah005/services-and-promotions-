@@ -1,0 +1,64 @@
+{
+  "name": "All In One Store",
+  "base_url": "https://allinonestore.pk",
+  "platform_type": "ecommerce",
+  "platform_name": "All In One Store",
+  "platform_display_name": "All In One Store",
+  "seller_display_name": "All In One Store",
+  "seller_website": "https://allinonestore.pk",
+  "seller_contact": "allinonestore.pk",
+  "seller_type": "ecommerce",
+  "description": "All In One Store - Kitchen & Dining products",
+  
+  "category_paths": {
+    "Kitchen & Dining": ""
+  },
+  
+  "selectors": {
+    "product_container": ".t4s-product",
+    "title": ".t4s-product-title a",
+    "price": ".t4s-product-price",
+    "original_price": ".t4s-product-price del",
+    "image": ".t4s-product-main-img",
+    "url": ".t4s-product-title a",
+    "brand": "",
+    "rating": ".t4s-product-rating",
+    "review_count": ".t4s-review-count",
+    "next_page": ".t4s-pagination a"
+  },
+  
+  "keywords": {
+    "Kitchen & Dining": [
+      "cookware", "utensils", "crockery", "dinner set", "kitchen", "dining", 
+      "cook", "utensil", "crockery", "dinner", "set", "kitchenware", 
+      "diningware", "tableware", "serveware", "bakeware", "cookware set",
+      "kitchen set", "dining set", "serving", "plates", "bowls", "cups",
+      "mugs", "glasses", "cutlery", "knives", "spoons", "forks"
+    ]
+  },
+  
+  "settings": {
+    "page_load_delay": 8,
+    "scroll_pause": 5,
+    "image_load_delay": 5,
+    "timeout": 30,
+    "retry_attempts": 3,
+    "retry_delay": 2,
+    "max_pages": 5,
+    "products_per_page": 52,
+    "scroll_increment": 300,
+    "scroll_pause_between": 2,
+    "max_scroll_attempts": 3,
+    "wait_for_images": true,
+    "image_visibility_check": true,
+    "max_image_retries": 3,
+    "click_load_more": false
+  },
+  
+  "filters": {
+    "min_price": 100,
+    "max_price": 50000,
+    "required_fields": ["title", "price"],
+    "exclude_keywords": ["test", "sample", "demo"]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "platform_name": "alfatah",
+  "platform_display_name": "Al Fatah Electronics",
+  "platform_type": "ecommerce",
+  "base_url": "https://www.alfatah.com.pk",
+  "currency": "PKR",
+  "main_category": "Electronics",
+  "subcategory": "Electronics & Technology",
+  "seller_username": "alfatah",
+  "seller_display_name": "Al Fatah Electronics",
+  "seller_profile_url": "https://www.alfatah.com.pk",
+
+  "selectors": {
+    "product_container": "li.product, .product, .woocommerce-loop-product, .product-item, .shopengine-products li, ul.products li",
+    "title": "h2.woocommerce-loop-product__title, .woocommerce-loop-product__title, h3 a, .product-title a, .product-name a",
+    "price": ".price .woocommerce-Price-amount bdi, .price .amount, .woocommerce-Price-amount, .price bdi, bdi",
+    "original_price": ".price del .woocommerce-Price-amount bdi, .price del .amount, .price del bdi, del .woocommerce-Price-amount",
+    "image": "a.woocommerce-LoopProduct-link img, img.wp-post-image, .attachment-woocommerce_thumbnail, .product-image img, img",
+    "url": "a.woocommerce-LoopProduct-link, .product-title a, .product-image a, a",
+    "brand": ".brand, .product-brand, .manufacturer",
+    "rating": ".star-rating, .woocommerce-product-rating .star-rating, .rating-stars",
+    "review_count": ".woocommerce-review-link, .review-count, .reviews-count",
+    "next_page": ".woocommerce-pagination a.next.page-numbers, .page-numbers .next, a.next"
+  },
+
+  "category_paths": {
+    "default": "/",
+    "air-conditioners-purifiers": "/product-category/online-shop-for-split-air-conditioner-in-pakistan/",
+    "refrigerators-deep-freezers": "/product-category/online-shop-for-refrigerators-in-pakistan/",
+    "washing-machines-dryers": "/product-category/online-shop-for-washing-machine-in-pakistan/",
+    "leds-audio": "/product-category/led-tv-price-in-pakistan/",
+    "kitchen-appliances": "/product-category/online-shop-for-kitchen-appliance-in-pakistan/",
+    "water-dispensers": "/product-category/online-shop-for-water-dispenser-in-pakistan/",
+    "geysers-heaters": "/product-category/geysers-and-heaters/",
+    "small-electronics": "/product-category/online-shop-for-small-kitchen-items-in-pakistan/",
+    "mobile-car-accessories": "/product-category/mobile-and-car-accessories/",
+    "air-coolers-water-coolers": "/product-category/air-cooler-water-cooler/"
+  },
+
+  "keywords": {
+    "Smartphones & Mobiles": ["mobile", "smartphone", "iphone", "samsung", "oppo", "xiaomi", "vivo", "huawei", "oneplus", "realme", "infinix", "tecno", "phone", "cell phone"],
+    "Laptops & Computers": ["laptop", "macbook", "desktop", "tablet", "gaming pc", "monitor", "computer", "notebook", "ultrabook", "chromebook", "workstation", "pc", "mac"],
+    "Audio & Accessories": ["earbuds", "headphones", "speaker", "mic", "microphone", "soundbar", "bluetooth", "wireless", "audio", "sound", "music", "earphone", "headset"],
+    "Mobile Accessories": ["charger", "power bank", "cover", "screen protector", "usb cable", "adapter", "phone case", "protector", "phone stand", "holder", "mobile charger", "cable", "wire"],
+    "Home Appliances (Large)": ["fridge", "refrigerator", "washing machine", "microwave", "dishwasher", "oven", "dryer", "freezer", "deep freezer", "washer", "front load", "top load", "twin tub"],
+    "Cooling & Heating": ["ac", "air conditioner", "fan", "room cooler", "heater", "geyser", "cooling", "heating", "ventilation", "air cooling", "1 ton", "1.5 ton", "2 ton", "air cooler", "cooler", "split ac", "window ac"],
+    "Kitchen Appliances (Small)": ["blender", "juicer", "cooker", "toaster", "coffee machine", "kettle", "mixer", "grinder", "food processor", "rice cooker", "pressure cooker", "air fryer", "electric kettle", "iron", "steamer"],
+    "Entertainment": ["television", "tv", "smart tv", "led", "home theater", "entertainment", "display", "screen", "32 inch", "43 inch", "50 inch", "55 inch", "sound system"]
+  },
+
+  "settings": {
+    "page_load_delay": 15,
+    "scroll_pause": 5,
+    "max_retries": 5,
+    "timeout": 45,
+    "headless": false,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  }
+}
+
+

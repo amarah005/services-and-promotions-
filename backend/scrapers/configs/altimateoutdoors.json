@@ -1,0 +1,104 @@
+{
+  "platform_name": "altimateoutdoors",
+  "platform_display_name": "Altimate Outdoors",
+  "platform_type": "ecommerce",
+  "base_url": "http://altimateoutdoors.pk",
+  "currency": "PKR",
+  "main_category": "Sports & Fitness",
+  "subcategory": "Outdoor & Adventure",
+  "seller_username": "altimateoutdoors",
+  "seller_display_name": "Altimate Outdoors",
+  "seller_profile_url": "http://altimateoutdoors.pk",
+  
+  "category_paths": {
+    "Outdoor & Adventure": {
+      "Trekking Apparel": "/shop/",
+      "Hunting Apparel": "/shop/",
+      "Other Brands": "/shop/",
+      "Equipment & Accessories": "/shop/"
+    }
+  },
+  
+  "selectors": {
+    "product_container": ".woocommerce-loop-product, .product, .product-item, .grid-item",
+    "product_name": ".woocommerce-loop-product__title, .product-title, h2, h3",
+    "product_url": "a[href*='/product/'], .woocommerce-loop-product__link, .product-link",
+    "product_price": ".woocommerce-Price-amount, .price, .amount",
+    "product_image": ".woocommerce-loop-product__link img, .product-image img",
+    "product_description": ".product-description, .product-summary, .description",
+    "product_availability": ".availability, .stock-status, .in-stock, .out-of-stock",
+    "product_brand": ".brand, .product-brand, .manufacturer, .vendor",
+    "product_sku": ".sku, .product-sku, .variant-sku, .product-code"
+  },
+  
+  "api_endpoints": {
+    "products": "/wp-json/wc/v3/products",
+    "categories": "/wp-json/wc/v3/products/categories"
+  },
+  
+  "api_parser": {
+    "products": "parse_woocommerce_products",
+    "categories": "parse_woocommerce_categories"
+  },
+  
+  "keywords": {
+    "Outdoor & Adventure": [
+      "tent", "camping", "hiking", "cycling", "sleeping bag", "backpack", 
+      "trekking pole", "climbing rope", "lantern", "binoculars", "compass", 
+      "camp stove", "kayak", "canoe", "helmet", "life jacket", "jacket",
+      "goggles", "sunglasses", "knife", "headlamp", "water bottle", "chair",
+      "hunting", "shooting", "vest", "gloves", "pants", "shirt", "cap",
+      "balaclava", "gaiters", "rain jacket", "thermal", "fleece", "camo"
+    ]
+  },
+  
+  "synonyms": {
+    "tent": ["camping tent", "hiking tent", "backpacking tent", "dome tent"],
+    "backpack": ["rucksack", "hiking pack", "trekking pack", "mountaineering pack"],
+    "sleeping bag": ["sleeping system", "camping bag", "hiking bag"],
+    "trekking pole": ["walking pole", "hiking pole", "trekking stick", "hiking stick"],
+    "climbing rope": ["dynamic rope", "static rope", "mountaineering rope"],
+    "helmet": ["climbing helmet", "safety helmet", "protection helmet"],
+    "lantern": ["camping light", "outdoor light", "portable light"],
+    "compass": ["navigation compass", "outdoor compass", "hiking compass"],
+    "camp stove": ["portable stove", "camping stove", "outdoor stove"],
+    "jacket": ["windbreaker", "waterproof jacket", "hiking jacket", "outdoor jacket", "rain jacket"],
+    "goggles": ["safety goggles", "tactical goggles", "outdoor goggles"],
+    "knife": ["survival knife", "camping knife", "outdoor knife"],
+    "headlamp": ["head torch", "camping light", "hiking light"],
+    "water bottle": ["hydration bottle", "camping bottle", "hiking bottle"],
+    "hunting": ["shooting", "outdoor hunting", "game hunting"],
+    "vest": ["hunting vest", "shooting vest", "outdoor vest", "strap vest"],
+    "gloves": ["hunting gloves", "shooting gloves", "outdoor gloves", "trekking gloves"],
+    "pants": ["hiking pants", "trekking pants", "outdoor pants", "cargo pants"],
+    "shirt": ["hunting shirt", "outdoor shirt", "field shirt", "hiking shirt"],
+    "cap": ["hunting cap", "outdoor cap", "hiking cap", "beanie"],
+    "balaclava": ["face mask", "neck gaiter", "head protection"],
+    "gaiters": ["leg gaiters", "hiking gaiters", "outdoor gaiters"],
+    "thermal": ["thermal wear", "base layer", "thermal clothing"],
+    "fleece": ["fleece jacket", "fleece vest", "fleece clothing"],
+    "camo": ["camouflage", "camo pattern", "hunting camo"]
+  },
+  
+  "settings": {
+    "page_load_delay": 2,
+    "scroll_pause": 1,
+    "timeout_seconds": 15,
+    "max_pages": 3,
+    "handle_popups": false,
+    "close_ads": false,
+    "scroll_to_bottom": false,
+    "wait_for_lazy_images": false,
+    "click_load_more": false,
+    "prefer_api": false,
+    "prefer_beautifulsoup": true,
+    "use_selenium_fallback": false,
+    "force_beautifulsoup": true
+  },
+  
+  "pagination": {
+    "next_page": ".pagination .next, .pagination a[rel='next'], .load-more, .woocommerce-pagination .next",
+    "page_param": "page",
+    "max_pages": 5
+  }
+}

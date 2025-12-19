@@ -1,0 +1,55 @@
+{
+  "platform_name": "plantscom",
+  "platform_display_name": "Plants.com.pk",
+  "platform_type": "ecommerce",
+  "base_url": "https://plants.com.pk/",
+  "currency": "PKR",
+  "main_category": "Home & Living",
+  "subcategory": "Gardening & Outdoor",
+  "seller_username": "plantscom",
+  "seller_display_name": "Plants.com.pk",
+  "seller_profile_url": "https://plants.com.pk",
+  "keywords": {
+    "Gardening & Outdoor": [
+      "plant", "pot", "garden", "lawn", "outdoor furniture", "cactus", "succulent", 
+      "bonsai", "tree", "flower", "seed", "fertilizer", "tool", "decoration", 
+      "fountain", "bench", "shade", "irrigation", "landscaping", "indoor", "outdoor", 
+      "seasonal", "climber", "ground cover", "ceramic", "concrete", "plastic", 
+      "stainless", "mud", "grow bag"
+    ]
+  },
+  "category_paths": {
+    "default": "/",
+    "plants": "/product-category/plants/",
+    "evergreen_trees": "/product-category/plants/evergreen-trees/",
+    "flowering_trees": "/product-category/plants/flowering-trees/",
+    "fruit_plants": "/product-category/plants/fruit-plants/",
+    "indoor_plants": "/product-category/plants/indoor-plants/",
+    "seeds": "/product-category/plants/plant-seeds/",
+    "shade_plants": "/product-category/plants/shade-plants/",
+    "garden_decor": "/product-category/accessories/garden-decor/",
+    "garden_furniture": "/product-category/accessories/garden-furniture/"
+  },
+  "selectors": {
+    "product_container": ".product",
+    "title": ".woocommerce-loop-product__title",
+    "price": ".woocommerce-Price-amount",
+    "image": "img",
+    "url": "a",
+    "brand": ".brand, .product-brand, .manufacturer",
+    "rating": ".rating, .star-rating, .woocommerce-product-rating",
+    "review_count": ".review-count, .woocommerce-review-link",
+    "next_page": ".next, .woocommerce-pagination .next, .page-numbers .next, .pagination .next, .page-numbers a, .pagination a"
+  },
+  "settings": {
+    "page_load_delay": 15,
+    "scroll_pause": 3.0,
+    "timeout": 120,
+    "wait_for_lazy_images": true,
+    "scroll_to_bottom": true,
+    "click_load_more": false,
+    "handle_popups": true,
+    "close_ads": true,
+    "wait_for_ads": 5
+  }
+}

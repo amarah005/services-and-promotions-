@@ -1,0 +1,58 @@
+{
+  "platform_name": "woodaction",
+  "platform_display_name": "Wood Action",
+  "base_url": "https://woodaction.com",
+  "platform_type": "woodaction",
+  "main_category": "Home & Living",
+  "subcategory": "Furniture",
+  "seller_username": "woodaction",
+  "seller_display_name": "Wood Action",
+  "seller_profile_url": "https://woodaction.com",
+  "selectors": {
+    "product_container": ".grid-view-item",
+    "title": ".grid-view-item__title",
+    "price": ".product-price__price",
+    "original_price": ".product-price__price:not(.product-price__sale)",
+    "image": ".grid-view-item__image",
+    "url": ".grid-view-item__link",
+    "brand": "Wood Action",
+    "next_page": ".pagination__next, .pagination-next, .next-page, a[rel='next']"
+  },
+  "category_paths": {
+    "Furniture": "/collections/living-room",
+    "Home Decor": "/collections/decor-1",
+    "Kitchen & Dining": "/collections/dining",
+    "Gardening & Outdoor": "/collections/rug"
+  },
+  "subcategory_paths": {
+    "Bed": "/collections/bed",
+    "Sofa": "/collections/sofa",
+    "Table": "/collections/table",
+    "Chair": "/collections/chair",
+    "Mirror": "/collections/mirror-and-consoles",
+    "Storage": "/collections/storage",
+    "Office": "/collections/study-table",
+    "Kids": "/collections/kids-furniture"
+  },
+  "keywords": {
+    "Furniture": ["sofa", "bed", "table", "chair", "furniture", "wood", "wooden", "couch", "settee", "mattress", "headboard", "bed frame", "armchair", "dining chair", "office chair", "stool", "side table", "coffee table", "dining table", "desk"],
+    "Home Decor": ["mirror", "lamp", "decor", "decoration", "rug", "cushion", "pillow", "vase", "art", "frame", "lighting", "chandelier", "pendant", "floor lamp", "table lamp"],
+    "Kitchen & Dining": ["dining", "dining table", "dining chair", "kitchen", "table", "chair"],
+    "Gardening & Outdoor": ["rug", "outdoor", "garden", "outdoor furniture"]
+  },
+  "settings": {
+    "page_load_delay": 20,
+    "scroll_pause": 10,
+    "image_load_delay": 8,
+    "click_load_more": false,
+    "scroll_increment": 500,
+    "scroll_pause_between": 3,
+    "max_scroll_attempts": 3,
+    "wait_for_images": true,
+    "image_visibility_check": true,
+    "max_image_retries": 3,
+    "timeout": 60,
+    "retry_attempts": 3,
+    "retry_delay": 5
+  }
+}

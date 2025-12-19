@@ -1,0 +1,104 @@
+{
+  "platform_name": "shophive",
+  "platform_display_name": "ShopHive",
+  "platform_type": "ecommerce",
+  "base_url": "https://www.shophive.com",
+  "currency": "PKR",
+  "main_category": "Electronics",
+  "subcategory": "Electronics & Technology",
+  "seller_username": "shophive",
+  "seller_display_name": "ShopHive",
+  "seller_profile_url": "https://shophive.com",
+  
+  "selectors": {
+    "product_container": ".product-item-info",
+    "title": ".product-item-link",
+    "price": ".price-wrapper .price",
+    "original_price": ".price del, .old-price, .was-price, del",
+    "image": ".product-image-photo, img.product-image-photo, img[src*='/media/catalog/product'], img[data-src], img[data-original], img[data-lazy], picture source[data-srcset], img[srcset]",
+    "url": ".product-item-link",
+    "brand": ".brand, .product-brand, .manufacturer, [class*='brand']",
+    "rating": ".rating, .star-rating, .stars, [class*='rating'], [class*='star']",
+    "review_count": ".review-count, .reviews, [class*='review']",
+    "next_page": ".pages-item-next a, .action.next, [class*='next']"
+  },
+  
+  "category_paths": {
+    "default": "/",
+    
+    "mobile-phones": "/mobile-phones",
+    "samsung-mobiles": "/mobile-phones/samsung",
+    "apple-iphone": "/apple/iphone",
+    "xiaomi-mobiles": "/mobile-phones/xiaomi-mi",
+    "vivo-mobiles": "/mobile-phones/vivo",
+    "oppo-mobiles": "/mobile-phones/oppo",
+    "infinix-mobiles": "/mobile-phones/infinix",
+    "tecno-mobiles": "/mobile-phones/tecno",
+    "realme-mobiles": "/mobile-phones/realme",
+    "mobile-accessories": "/mobile-phones/mobile-accessories/power-banks",
+    
+    "tablets": "/tablets",
+    "samsung-tablets": "/tablets/samsung",
+    "apple-ipad": "/apple/ipad",
+    "xiaomi-tablets": "/tablets/xiaomi-mi",
+    
+    "smart-watches": "/smart-watches",
+    "apple-watch": "/apple/watch",
+    "samsung-watch": "/smart-watches/samsung",
+    "xiaomi-watch": "/smart-watches/xiaomi",
+    
+    "laptops": "/laptops-computers/laptops",
+    "gaming-laptops": "/laptops-computers/laptops/gaming",
+    "macbooks": "/apple/mac",
+    "dell-laptops": "/laptops-computers/laptops/dell",
+    "hp-laptops": "/laptops-computers/laptops/hp",
+    
+    "audio": "/audio",
+    "headphones": "/audio/headphones",
+    "earbuds": "/audio/earbuds",
+    "bluetooth-speakers": "/audio/bluetooth-speakers",
+    "soundbar": "/audio/soundbar",
+    
+    "tv-led": "/tv/led",
+    "samsung-tv": "/tv/led/samsung",
+    "lg-tv": "/tv/led/lg",
+    
+    "appliances": "/appliances",
+    "air-conditioners": "/appliances/air-conditioners",
+    "kitchen-appliances": "/appliances/kitchen",
+    "refrigerators": "/appliances/kitchen/refrigerators",
+    
+    "cameras": "/cameras",
+    "dslr-cameras": "/cameras/dslr-cameras",
+    
+    "video-games": "/video-games",
+    "gaming-consoles": "/video-games/gaming-consoles"
+  },
+  
+  "keywords": {
+    "Smartphones & Mobiles": ["mobile", "smartphone", "iphone", "samsung", "oppo", "xiaomi", "vivo", "huawei", "oneplus", "realme", "infinix", "tecno", "phone", "cell phone"],
+    "Laptops & Computers": ["laptop", "macbook", "desktop", "tablet", "gaming pc", "monitor", "computer", "notebook", "ultrabook", "chromebook", "workstation", "pc", "mac"],
+    "Audio & Accessories": ["earbuds", "headphones", "speaker", "mic", "microphone", "soundbar", "bluetooth", "wireless", "audio", "sound", "music", "earphone", "headset"],
+    "Mobile Accessories": ["charger", "power bank", "cover", "screen protector", "usb cable", "adapter", "phone case", "protector", "phone stand", "holder", "mobile charger", "cable", "wire"],
+    "Home Appliances (Large)": ["fridge", "refrigerator", "washing machine", "microwave", "dishwasher", "oven", "dryer", "freezer", "deep freezer", "washer", "front load", "top load", "twin tub"],
+    "Cooling & Heating": ["ac", "air conditioner", "fan", "room cooler", "heater", "geyser", "cooling", "heating", "ventilation", "air cooling", "1 ton", "1.5 ton", "2 ton", "air cooler", "cooler", "split ac", "window ac"],
+    "Kitchen Appliances (Small)": ["blender", "juicer", "cooker", "toaster", "coffee machine", "kettle", "mixer", "grinder", "food processor", "rice cooker", "pressure cooker", "air fryer", "electric kettle", "iron", "steamer"],
+    "Entertainment": ["television", "tv", "smart tv", "led", "home theater", "entertainment", "display", "screen", "32 inch", "43 inch", "50 inch", "55 inch", "sound system"]
+  },
+  
+  "settings": {
+    "page_load_delay": 25,
+    "scroll_pause": 10,
+    "max_retries": 5,
+    "timeout": 60,
+    "headless": false,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "scroll_to_bottom": true,
+    "click_load_more": true,
+    "wait_for_lazy_images": true,
+    "image_load_delay": 5,
+    "lazy_image_attributes": ["data-src", "data-original", "data-lazy", "data-srcset"],
+    "validate_urls": true,
+    "prefer_product_urls": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "platform_name": "furniturehub",
+  "platform_display_name": "Furniture Hub",
+  "platform_type": "ecommerce",
+  "base_url": "https://furniturehub.pk",
+  "currency": "PKR",
+  "main_category": "Home & Living",
+  "subcategory": "Furniture",
+  "seller_username": "furniturehub",
+  "seller_display_name": "Furniture Hub",
+  "seller_profile_url": "https://furniturehub.pk",
+  
+  "selectors": {
+    "product_container": ".subProduct",
+    "title": ".woocommerce-loop-product__title",
+    "price": ".price ins .woocommerce-Price-amount",
+    "original_price": ".price del .woocommerce-Price-amount",
+    "image": ".attachment-woocommerce_thumbnail img",
+    "url": ".woocommerce-LoopProduct-link",
+    "brand": ".brand, .product-brand, .manufacturer, [class*='brand']",
+    "rating": ".rating, .star-rating, .stars, [class*='rating'], [class*='star']",
+    "review_count": ".review-count, .reviews, [class*='review']",
+    "next_page": ".next, .page-numbers .next, .pagination .next, [class*='next'], .pagination a"
+  },
+  
+  "category_paths": {
+    "default": "/",
+    "furniture": "/product-category/sofas/diwan-sofa-design/",
+    "home-decor": "/product-category/bathroom-interior-design/",
+    "kitchen-dining": "/product-category/kitchen-furniture/",
+    "outdoor": "/product-category/outdoor-furniture/"
+  },
+  
+  "keywords": {
+    "Furniture": ["sofa", "bed", "wardrobe", "table", "chair", "almirah", "dining table", "coffee table", "bookshelf", "cabinet", "dresser", "nightstand", "ottoman", "recliner", "sectional", "loveseat", "armchair", "desk", "office chair", "stool", "bench", "shelving", "storage", "closet", "wardrobe"],
+    "Home Decor": ["carpet", "curtain", "lamp", "mirror", "painting", "wall clock", "decoration", "decor", "wall art", "vase", "cushion", "pillow", "rug", "throw", "blanket", "candle", "frame", "sculpture", "ornament", "centerpiece", "artwork", "tapestry", "wallpaper", "blind", "shade"],
+    "Kitchen & Dining": ["cookware", "utensils", "crockery", "dinner set", "kitchen utensils", "dinnerware", "cutlery", "plates", "bowls", "cups", "glasses", "pots", "pans", "knife", "spoon", "fork", "serving", "tableware", "kitchenware", "bakeware", "storage container", "kitchen accessories"],
+    "Gardening & Outdoor": ["plant", "pot", "garden", "lawn", "outdoor furniture", "patio", "garden furniture", "outdoor table", "outdoor chair", "garden bench", "plant pot", "planter", "garden tool", "outdoor decor", "garden decoration", "outdoor lighting", "garden lighting", "outdoor rug", "patio set", "garden set"]
+  },
+  
+  "settings": {
+    "page_load_delay": 5,
+    "scroll_pause": 3,
+    "max_retries": 3,
+    "timeout": 30,
+    "headless": true,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "scroll_to_bottom": true,
+    "click_load_more": false,
+    "wait_for_lazy_images": true,
+    "image_load_delay": 2,
+    "lazy_image_attributes": ["data-src", "data-original", "data-lazy", "data-srcset"],
+    "validate_urls": true,
+    "prefer_product_urls": true
+  }
+}

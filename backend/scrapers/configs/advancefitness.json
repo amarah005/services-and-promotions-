@@ -1,0 +1,85 @@
+{
+  "platform_name": "advancefitness",
+  "platform_display_name": "Advance Fitness (Bilal Brothers)",
+  "platform_type": "ecommerce",
+  "base_url": "https://advancefitness.pk/",
+  "currency": "PKR",
+  "main_category": "Sports & Fitness",
+  "subcategory": "Gym Equipment",
+  "seller_username": "advancefitness",
+  "seller_display_name": "Advance Fitness",
+  "seller_profile_url": "https://advancefitness.pk/",
+
+  "category_paths": {
+    "default": "/",
+    "treadmills": "/product-category/treadmill/",
+    "ellipticals": "/product-category/elliptical/",
+    "bikes": "/product-category/bike/",
+    "home_gyms": "/product-category/home-gyms-benches/",
+    "yoga": "/product-category/yoga-accessories/",
+    "strength": "/product-category/commercial-strength/"
+  },
+
+  "selectors": {
+    "product_container": ".product, .woocommerce ul.products li.product, .product-grid .product-item",
+    "title": ".woocommerce-loop-product__title, .product-title, h2.woocommerce-loop-product__title, h3 a",
+    "price": ".price, .woocommerce-Price-amount, .amount",
+    "image": "img[loading], .product-thumbnail img, .attachment-woocommerce_thumbnail",
+    "url": "a.woocommerce-LoopProduct-link, a[href*='/product/'], .woocommerce-loop-product__link",
+    "next_page": ".page-numbers a, a.next, a[href*='paged=']"
+  },
+
+  "keywords": {
+    "Gym Equipment": [
+      "dumbbell", "treadmill", "bench press", "yoga mat",
+      "barbell", "kettlebell", "resistance band", "pull-up bar",
+      "rowing machine", "exercise bike", "elliptical", "medicine ball",
+      "foam roller", "weight plates", "smith machine", "squat rack", "jump rope"
+    ],
+    "Sports Gear": [
+      "cricket bat", "football", "hockey stick", "tennis racket",
+      "basketball", "volleyball", "badminton racket", "table tennis paddle",
+      "golf club", "rugby ball", "boxing gloves", "baseball bat",
+      "archery bow", "swimming goggles", "kickboard", "surfboard"
+    ],
+    "Sportswear": [
+      "tracksuit", "jersey", "shorts", "leggings",
+      "compression shirt", "running shoes", "football boots",
+      "training shoes", "socks", "headband", "wristband",
+      "hoodie", "tank top", "sweatpants", "cap"
+    ],
+    "Outdoor & Adventure": [
+      "tent", "camping", "hiking", "cycling",
+      "sleeping bag", "backpack", "trekking pole", "climbing rope",
+      "lantern", "binoculars", "compass", "camp stove",
+      "kayak", "canoe", "helmet", "life jacket"
+    ]
+  },
+
+  "synonyms": {
+    "dumbbell": ["dumbbells"],
+    "kettlebell": ["kettlebells"],
+    "resistance band": ["resistance bands", "exercise band", "exercise bands"],
+    "pull-up bar": ["pull up bar", "chin-up bar", "chin up bar"],
+    "exercise bike": ["spin bike", "stationary bike", "recumbent bike", "upright bike"],
+    "elliptical": ["cross trainer", "elliptical trainer"],
+    "weight plates": ["weight plate", "plates", "discs"],
+    "smith machine": ["smith rack"],
+    "squat rack": ["power rack", "power cage"],
+    "running shoes": ["runners", "trainers", "sneakers"],
+    "sports shoes": ["athletic shoes", "gym shoes"]
+  },
+
+  "settings": {
+    "page_load_delay": 3,
+    "scroll_pause": 2,
+    "timeout": 40,
+    "handle_popups": true,
+    "close_ads": true,
+    "wait_for_lazy_images": true,
+    "scroll_to_bottom": true,
+    "click_load_more": false
+  }
+}
+
+

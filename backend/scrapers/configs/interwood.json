@@ -1,0 +1,61 @@
+{
+  "platform_name": "interwood",
+  "platform_display_name": "Interwood",
+  "platform_type": "ecommerce",
+  "base_url": "https://interwood.pk",
+  "currency": "PKR",
+  "main_category": "Home & Living",
+  "subcategory": "Furniture",
+  "seller_username": "interwood",
+  "seller_display_name": "Interwood",
+  "seller_profile_url": "https://interwood.pk",
+
+  "selectors": {
+    "product_container": "li.column",
+    "title": ".product-card-title, .product-title, h3, .product-name, .product-card h3, .product-card .title",
+    "price": ".price .amount, .price, .product-price, .amount",
+    "original_price": ".price del, .was, .compare-at, .price__compare, del, .original-price, .price-original",
+    "image": ".product-primary-image, .product-secondary-image, img[data-src], img[data-original], img[data-lazy], .product-card img",
+    "url": ".product-featured-image-link, .product-card a, .product-link",
+    "brand": ".brand, .product-brand, .manufacturer, [class*='brand'], .vendor",
+    "rating": ".star-rating, .rating, .stars",
+    "review_count": ".review-count, .reviews-count, [class*='review']",
+    "next_page": ".pagination a, a[href*='page='], [class*='next'], .next, .load-more, button[class*='load']"
+  },
+
+  "category_paths": {
+    "default": "/",
+    "Furniture": "/collections/beds"
+  },
+
+  "keywords": {
+    "Furniture": ["sofa", "bed", "wardrobe", "table", "chair", "almirah", "dining table", "coffee table", "side table", "bookshelf", "cabinet", "dresser", "nightstand"]
+  },
+
+  "settings": {
+    "page_load_delay": 30,
+    "scroll_pause": 15,
+    "max_retries": 5,
+    "timeout": 120,
+    "headless": true,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "scroll_to_bottom": true,
+    "click_load_more": false,
+    "wait_for_lazy_images": true,
+    "image_load_delay": 10,
+    "lazy_image_attributes": ["data-src", "data-original", "data-lazy", "data-srcset"],
+    "validate_urls": true,
+    "prefer_product_urls": true,
+    "scroll_increment": 300,
+    "scroll_pause_between": 3,
+    "max_scroll_attempts": 15,
+    "wait_for_images": true,
+    "image_visibility_check": true,
+    "retry_failed_images": true,
+    "max_image_retries": 3,
+    "retry_failed_pages": true,
+    "max_page_retries": 2
+  }
+}
+
+

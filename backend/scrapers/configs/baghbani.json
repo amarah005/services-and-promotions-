@@ -1,0 +1,56 @@
+{
+  "platform_name": "baghbani",
+  "platform_display_name": "Baghbani.pk",
+  "platform_type": "ecommerce",
+  "base_url": "https://baghbani.pk/",
+  "currency": "PKR",
+  "main_category": "Home & Living",
+  "subcategory": "Gardening & Outdoor",
+  "seller_username": "baghbani",
+  "seller_display_name": "Baghbani.pk",
+  "seller_profile_url": "https://baghbani.pk",
+  "keywords": {
+    "Gardening & Outdoor": [
+      "plant", "pot", "garden", "lawn", "outdoor furniture", "cactus",
+      "succulent", "bonsai", "tree", "flower", "seed", "fertilizer", "tool",
+      "decoration", "fountain", "bench", "shade", "irrigation", "landscaping",
+      "indoor", "outdoor", "seasonal", "climber", "ground cover", "ceramic",
+      "concrete", "plastic", "stainless", "mud", "grow bag"
+    ]
+  },
+  "category_paths": {
+    "default": "/",
+    "plants": "/plants/",
+    "indoor_plants": "/product-category/plants/indoor-plants/",
+    "outdoor_plants": "/product-category/plants/outdoor-plants/",
+    "succulents": "/product-category/plants/sacculents/",
+    "cactus": "/product-category/plants/cactus/",
+    "seeds": "/product-category/winter-seeds/",
+    "fertilizers": "/product-category/garden-care/fertilizers/",
+    "tools": "/product-category/gardening-accessories/gardening-tools/",
+    "grow_bags": "/product-category/gardening-accessories/pots/grow-bags/",
+    "plastic_pots": "/product-category/gardening-accessories/pots/plastic-pots/"
+  },
+  "selectors": {
+    "product_container": ".product, .woocommerce-loop-product, .product-item",
+    "title": ".product-title, .woocommerce-loop-product__title, h2, h3",
+    "price": ".price, .woocommerce-Price-amount, .amount",
+    "image": "img",
+    "url": "a",
+    "brand": ".brand, .product-brand, .manufacturer",
+    "rating": ".rating, .star-rating, .woocommerce-product-rating",
+    "review_count": ".review-count, .woocommerce-review-link",
+    "next_page": ".next, .woocommerce-pagination .next, .page-numbers .next, .pagination .next, .page-numbers a, .pagination a"
+  },
+  "settings": {
+    "page_load_delay": 10,
+    "scroll_pause": 2.0,
+    "timeout": 60,
+    "wait_for_lazy_images": true,
+    "scroll_to_bottom": true,
+    "click_load_more": false,
+    "handle_popups": true,
+    "close_ads": true,
+    "wait_for_ads": 3
+  }
+}
