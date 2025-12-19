@@ -1,97 +1,139 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🚀 BuyVaultHub - Full Stack Project
 
-# Getting Started
+Welcome to **BuyVaultHub**, a comprehensive shopping platform featuring a **React Native Mobile App** (Frontend) and a **Django REST Framework** (Backend).
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+This guide is designed for both beginners and team collaborators to get the project up and running smoothly.
 
-## Step 1: Start Metro
+---
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 📂 Folder Structure
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+Here is how the project is organized. Understanding this will help you navigate and modify the code.
 
-```sh
-# Using npm
+```text
+BuyVaultHub/
+├── android/             # Android native source code
+├── ios/                 # iOS native source code
+├── src/                 # 🌐 FRONTEND CORE (React Native)
+│   ├── assets/          # Images, fonts, and static files
+│   ├── components/      # Reusable UI elements (buttons, inputs)
+│   ├── screens/         # Main app pages (Home, Login, Product Detail)
+│   ├── navigations/     # App routing logic
+│   └── utils/           # Helper functions
+├── backend/             # 🐍 BACKEND CORE (Django)
+│   ├── buyvaulthub/     # Main project settings & config
+│   ├── products/        # Product management API
+│   ├── users/           # User authentication & profiles
+│   ├── recommendations/ # AI-driven recommendation logic
+│   ├── manage.py        # Django CLI entry point
+│   └── requirements.txt # Python dependencies
+├── AppBackend/          # 🔌 NETWORKING LAYER (Detailed below)
+│   ├── config.js        # API Base URL & Endpoints
+│   ├── apiClient.js     # Centralized networking logic (Fetch + JWT)
+│   ├── api.js           # High-level API methods (Auth, Products,etc.)
+│   └── googleLogin.js   # Google Sign-In integration
+├── App.tsx              # Main entry point for the mobile app
+├── package.json         # Frontend dependencies and scripts
+└── .gitignore           # Tells Git which files to ignore
+```
+
+---
+
+## 🔗 How They Connect
+
+The **Frontend** and **Backend** communicate via an **API (Application Programming Interface)**.
+
+1.  **Backend (Django)** runs a local server (usually at `http://127.0.0.1:8000`).
+2.  **Frontend (React Native)** makes requests to this server to fetch products, log in users, etc.
+3.  **AppBackend/config.js** is the "bridge". It holds the `BASE_URL`:
+    - For Android: `http://10.0.2.2:8000` (Emulator's way to see your PC).
+    - For iOS: `http://localhost:8000`.
+
+---
+
+## 🔌 Detailed: AppBackend (The Networking Layer)
+
+The `AppBackend` folder is the brain of the app's communication. It handles how the data travels between your phone and the server.
+
+### 1. `config.js` (The Settings)
+*   **What it does**: Stores the "Address" of your server and the names of all "Doors" (Endpoints) to get data.
+*   **Why we need it**: Instead of writing the server URL everywhere, we change it only here.
+
+### 2. `apiClient.js` (The Engine)
+*   **What it does**: This is the most complex file. It handles:
+    *   **JWT Tokens**: Automatically attaches your "Identity Card" (Login Token) to every request.
+    *   **Auto-Refresh**: If your token expires while using the app, this file automatically asks the server for a new one without interrupting the user.
+    *   **Timeouts**: Stops a request if it takes too long (e.g., bad internet).
+*   **Why we need it**: It keeps the app secure and stable.
+
+### 3. `api.js` (The Menu)
+*   **What it does**: A high-level list of "Orders" you can make.
+    *   `authAPI.login()`: Order a login.
+    *   `productsAPI.getProducts()`: Get a list of products.
+    *   `wishlistAPI.addToWishlist()`: Add an item to your favorites.
+*   **Why we need it**: It makes the code very easy to read. Developers just call one function instead of writing raw code.
+
+### 4. `googleLogin.js` (The Google Key)
+*   **What it does**: Specifically handles signing in with a Google account. It talks to Google first, gets a special code, and then sends it to our Django server.
+
+---
+
+## 🛠️ Installation & Setup
+
+Follow these steps in order to run the project on your machine.
+
+### 1. Backend Setup (Django)
+Open a terminal in the `backend/` folder:
+
+```bash
+# Navigate to backend
+cd backend
+
+# Create a virtual environment (recommended)
+python -m venv venv
+venv\Scripts\activate  # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Configure your .env file
+# (Copy credentials from your team lead)
+
+# Run migrations (Setup database)
+python manage.py migrate
+
+# Start the server
+python manage.py runserver
+```
+
+### 2. Frontend Setup (React Native)
+Open another terminal in the **root** folder (`BuyVaultHub/`):
+
+```bash
+# Install Node modules
+npm install
+
+# Start Metro Bundler
 npm start
 
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
+# Run on Android
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### iOS
+---
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## 👥 Information for Team Members
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+If you just downloaded this project from GitHub, please note:
 
-```sh
-bundle install
-```
+- **Missing Files**: Files like `.env` and `node_modules` are NOT pushed to GitHub for security and size reasons.
+- **Setup Required**: You must follow the **Installation & Setup** steps above to generate these files locally.
+- **Database**: The project uses **PostgreSQL**. Ensure you have it installed and a database named `buyvaulthub_db` created before running migrations.
 
-Then, and every time you update your native dependencies, run:
+---
 
-```sh
-bundle exec pod install
-```
+## ✅ Ready for Production?
+The code pushed to GitHub is clean and follows industry standards. Once your teammate downloads it and follows the setup steps, everything will work perfectly!
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+---
+*Created by [Your Name/Team]. Happy Coding!*

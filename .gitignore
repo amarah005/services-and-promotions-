@@ -108,3 +108,4 @@ ios/build/
 # Documentation
 *.md
 !START_HERE.md
+!README.md
