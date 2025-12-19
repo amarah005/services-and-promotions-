@@ -136,4 +136,4 @@ If you just downloaded this project from GitHub, please note:
 The code pushed to GitHub is clean and follows industry standards. Once your teammate downloads it and follows the setup steps, everything will work perfectly!
 
 ---
-* Happy Coding!*
+*Happy Coding!*
