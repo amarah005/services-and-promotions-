@@ -206,9 +206,9 @@ To set up PostgreSQL:
 2. **Check status codes**: 401 = unauthorized, 404 = not found, 500 = server error
 3. **Check network tab**: Use React Native Debugger to inspect requests
 
-## Files Modified
+## Files
 
-The following React Native files have been updated to use the backend:
+The following React Native files use the backend:
 
 - `src/contexts/AuthContext.jsx` - Authentication context
 - `src/screens/LoginScreen.jsx` - Login screen
