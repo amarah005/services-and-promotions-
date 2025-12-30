@@ -1,98 +1,121 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
-
-import { HelloWave } from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
+import { ChatButton } from '@/components/chatbot/ChatButton';
+import { FilterBar } from '@/components/marketplace/FilterBar';
+import { MarketplaceFooter } from '@/components/marketplace/MarketplaceFooter';
+import { MarketplaceHero } from '@/components/marketplace/MarketplaceHero';
+import { SERVICES } from '@/components/marketplace/mockData';
+import { ServiceCard } from '@/components/marketplace/ServiceCard';
+import React, { useMemo, useState } from 'react';
+import { Platform, SafeAreaView, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 
 export default function HomeScreen() {
-  return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <Link href="/modal">
-          <Link.Trigger>
-            <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-          </Link.Trigger>
-          <Link.Preview />
-          <Link.Menu>
-            <Link.MenuAction title="Action" icon="cube" onPress={() => alert('Action pressed')} />
-            <Link.MenuAction
-              title="Share"
-              icon="square.and.arrow.up"
-              onPress={() => alert('Share pressed')}
-            />
-            <Link.Menu title="More" icon="ellipsis">
-              <Link.MenuAction
-                title="Delete"
-                icon="trash"
-                destructive
-                onPress={() => alert('Delete pressed')}
-              />
-            </Link.Menu>
-          </Link.Menu>
-        </Link>
+  const { width } = useWindowDimensions();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortType, setSortType] = useState<'price_asc' | 'price_desc' | null>(null);
 
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+  // Responsive Grid Calculation
+  const getGridSettings = () => {
+    // Breakpoints
+    if (width >= 1024) return { numColumns: 4, padding: 80 }; // Desktop
+    if (width >= 768) return { numColumns: 3, padding: 32 };  // Tablet
+    return { numColumns: 2, padding: 16 };                    // Mobile
+  };
+
+  const { numColumns, padding } = getGridSettings();
+  const gap = 20; // Increased gap for better look
+
+  // Calculate card width
+  const availableWidth = width - (padding * 2) - (gap * (numColumns - 1));
+  const cardWidth = Math.max(0, availableWidth / numColumns);
+
+  // Filter and Sort Data
+  const filteredServices = useMemo(() => {
+    let result = [...SERVICES];
+
+    // Filter by search query
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      result = result.filter(item =>
+        item.title.toLowerCase().includes(query) ||
+        (item.details && item.details.toLowerCase().includes(query))
+      );
+    }
+
+    // Sort by price
+    if (sortType) {
+      result.sort((a, b) => {
+        // Parse "Rs 3300" -> 3300
+        const priceA = parseInt(a.price.replace(/[^0-9]/g, ''), 10) || 0;
+        const priceB = parseInt(b.price.replace(/[^0-9]/g, ''), 10) || 0;
+
+        return sortType === 'price_asc' ? priceA - priceB : priceB - priceA;
+      });
+    }
+
+    return result;
+  }, [searchQuery, sortType]);
+
+  return (
+    <SafeAreaView style={styles.safeArea}>
+      <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+
+        {/* Marketplace Container */}
+        <View style={[styles.container, { paddingHorizontal: padding }]}>
+          <MarketplaceHero />
+
+          <FilterBar
+            onSearch={setSearchQuery}
+            onSortChange={setSortType}
+          />
+
+          {filteredServices.length === 0 ? (
+            <View style={styles.emptyState}>
+              <Text style={styles.emptyText}>No services found matching "{searchQuery}"</Text>
+            </View>
+          ) : (
+            <View style={[styles.grid, { gap }]}>
+              {filteredServices.map((item) => (
+                <View key={item.id} style={{ width: cardWidth }}>
+                  <ServiceCard item={item} />
+                </View>
+              ))}
+            </View>
+          )}
+        </View>
+
+        <MarketplaceFooter />
+      </ScrollView>
+      <ChatButton />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#fff',
+    paddingTop: Platform.OS === 'android' ? 30 : 0,
+  },
+  scrollContent: {
+    flexGrow: 1,
+    backgroundColor: '#fff',
+  },
+  container: {
+    paddingVertical: 24,
+    maxWidth: 1600,
+    alignSelf: 'center',
+    width: '100%',
+  },
+  grid: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+  emptyState: {
+    padding: 40,
     alignItems: 'center',
-    gap: 8,
+    justifyContent: 'center',
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
+  emptyText: {
+    fontSize: 16,
+    color: '#6b7280',
+  }
 });
