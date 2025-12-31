@@ -1,14 +1,29 @@
 const fs = require('fs');
 const path = require('path');
 
-const csvPath = path.join(__dirname, '../assets/data/data2.csv');
-const outputPath = path.join(__dirname, '../components/marketplace/mockData.ts');
+const OUTPUT_PATH = path.join(__dirname, '../components/marketplace/mockData.ts');
 
-const csvContent = fs.readFileSync(csvPath, 'utf8');
-const lines = csvContent.split('\n');
+const SOURCES = [
+    {
+        path: '../assets/data/data2.csv',
+        type: 'MAHIR',
+        imageDir: '../../assets/data/image2/' // Existing logic
+    },
+    {
+        path: '../assets/data2/data2.csv',
+        type: 'MAHIR',
+        imageDir: '../../assets/data2/image2/image3/' // New Mahir data location
+    },
+    {
+        path: '../assets/data2/data1.csv',
+        type: 'GURU',
+        imageDir: '../../assets/data2/image1/image2/' // Guru data location
+    }
+];
+
 const services = [];
+let globalId = 1;
 
-// Simple CSV line parser that handles quotes
 function parseCSVLine(text) {
     const result = [];
     let cell = '';
@@ -28,48 +43,73 @@ function parseCSVLine(text) {
     return result;
 }
 
-// Skip header
-for (let i = 1; i < lines.length; i++) {
-    const line = lines[i].trim();
-    if (!line) continue;
+SOURCES.forEach(source => {
+    try {
+        const csvPath = path.join(__dirname, source.path);
+        if (!fs.existsSync(csvPath)) {
+            console.warn(`Skipping missing file: ${csvPath}`);
+            return;
+        }
 
-    // Columns: Platform, Service_Title, Details, Price, Link, Image_Path
-    const cols = parseCSVLine(line);
-    if (cols.length < 6) continue;
+        const csvContent = fs.readFileSync(csvPath, 'utf8');
+        const lines = csvContent.split('\n');
 
-    const id = (i).toString();
-    const title = cols[1].trim();
-    const details = cols[2].trim();
-    const priceRaw = cols[3].trim(); // "Rs:3300"
-    let price = priceRaw.replace('Rs:', 'Rs '); // Format to "Rs 3300"
-    const link = cols[4].trim(); // Extract link URL
+        // Skip header
+        for (let i = 1; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (!line) continue;
 
-    // Image Path: image3/mahir_1.jpg -> we need maher_1.jpg and map to imagee2
-    const imagePathRaw = cols[5].trim();
-    const imageName = imagePathRaw.split('/')[1]; // maher_1.jpg
+            const cols = parseCSVLine(line);
 
-    // Randomly assign badges to 20% of items
-    const badges = ['Best Seller', 'New', 'Hot', 'Discount'];
-    const badge = Math.random() > 0.8 ? badges[Math.floor(Math.random() * badges.length)] : null;
+            let title, price, details, link, imageName;
 
-    // Assign a color based on id logic to keep it colorful
-    const colors = ['#3b82f6', '#a855f7', '#22c55e', '#eab308', '#ec4899', '#14b8a6', '#f97316', '#ef4444', '#64748b'];
-    const color = colors[i % colors.length];
+            if (source.type === 'MAHIR') {
+                // Platform, Service_Title, Details, Price, Link, Image_Path
+                if (cols.length < 6) continue;
+                title = cols[1].trim();
+                details = cols[2].trim();
+                let priceRaw = cols[3].trim();
+                price = priceRaw.replace('Rs:', 'Rs ').replace('Rs', 'Rs '); // Normalize "Rs:" -> "Rs "
+                link = cols[4].trim();
+                const imagePathRaw = cols[5].trim();
+                imageName = imagePathRaw.split('/').pop(); // Extract filename (mahir_x.jpg)
+            } else if (source.type === 'GURU') {
+                // Platform, Title, Company, Budget, Link, Image_Path
+                if (cols.length < 6) continue;
+                title = cols[1].trim();
+                const company = cols[2].trim();
+                details = company ? `By ${company}` : 'Professional Service';
+                price = cols[3].trim().replace(/\s+/g, ' '); // Clean up budget string
+                link = cols[4].trim();
+                const imagePathRaw = cols[5].trim();
+                imageName = imagePathRaw.split('/').pop(); // Extract filename (service_x.jpg)
+            }
 
-    // Fix capitalization in titles (e.g. "AC installation" -> "AC Installation")
-    const formattedTitle = title.replace(/\b\w/g, l => l.toUpperCase());
+            // Capitalize Title
+            const formattedTitle = title.replace(/\b\w/g, l => l.toUpperCase());
 
-    services.push({
-        id,
-        title: formattedTitle,
-        badge,
-        price,
-        color,
-        imageName: imageName,
-        details,
-        link
-    });
-}
+            // Badges & Colors
+            const badges = ['Best Seller', 'New', 'Hot', 'Discount'];
+            const badge = Math.random() > 0.85 ? badges[Math.floor(Math.random() * badges.length)] : null;
+            const colors = ['#3b82f6', '#a855f7', '#22c55e', '#eab308', '#ec4899', '#14b8a6', '#f97316', '#ef4444', '#64748b'];
+            const color = colors[globalId % colors.length];
+
+            services.push({
+                id: (globalId++).toString(),
+                title: formattedTitle,
+                badge,
+                price,
+                color,
+                imageDir: source.imageDir,
+                imageName,
+                details,
+                link
+            });
+        }
+    } catch (e) {
+        console.error(`Error processing ${source.path}:`, e);
+    }
+});
 
 const fileContent = `export const SERVICES = [
 ${services.map(s => `  {
@@ -80,10 +120,10 @@ ${services.map(s => `  {
     color: '${s.color}',
     details: ${JSON.stringify(s.details)},
     link: ${JSON.stringify(s.link)},
-    image: require('../../assets/data/image2/${s.imageName}')
+    image: require('${s.imageDir}${s.imageName}')
   }`).join(',\n')}
 ];
 `;
 
-fs.writeFileSync(outputPath, fileContent);
+fs.writeFileSync(OUTPUT_PATH, fileContent);
 console.log('Successfully generated mockData.ts with ' + services.length + ' items.');

@@ -2,9 +2,9 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { SERVICES } from '../marketplace/mockData';
 import { ChatMessage, processUserQuery } from './ChatLogic';
 
-// ⚠️ REPLACE WITH YOUR API KEY
+// ⚠️ REPLACE WITH YOUR API KEY IN .env FILE
 // Get one here for free: https://aistudio.google.com/app/apikey
-const API_KEY = "AIzaSyBhaxYCzPqzOE2NJswCbaW2V4560ID1QVw";
+const API_KEY = process.env.EXPO_PUBLIC_GEMINI_API_KEY || "";
 
 const genAI = new GoogleGenerativeAI(API_KEY);
 
